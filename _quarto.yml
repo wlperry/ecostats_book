@@ -5,11 +5,11 @@ project:
 website:
   title: "UMD Biostatistics"
   site-url: "https://your-site-url.github.io"
+  search: true
 
   sidebar:
     logo: "images/course-hex.png"
     style: "docked"
-    search: true
     collapse-level: 1
     contents:
       - section: "Course Information"
@@ -49,5 +49,5 @@ website:
 format:
   html:
     theme: css/theme.scss
-    css: styles.css  # Fixed! Removed css/ since the file is in your main directory
+    css: styles.css
     toc: true

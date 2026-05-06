@@ -1,0 +1,20 @@
+---
+title: "Lectures"
+title-block-banner: true
+page-layout: full
+format: 
+  html: 
+    format-links: false
+  revealjs: 
+    output-ext: "slides.html"
+listing:
+  contents: 
+    - "lecture_*/*.qmd"
+  type: grid
+  sort: "title asc"
+  categories: true
+  sort-ui: false
+  filter-ui: true
+---
+
+Welcome to the course lectures. Click on any card below to view the slides and materials for that topic, or use the search bar to find a specific lecture.

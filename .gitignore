@@ -1,15 +1,20 @@
-# Ignore everything in the root
-/*
-
-# Whitelist: Do NOT ignore these specific folders/files
-!/docs/
-!.gitignore
-!README.md
-!LICENSE
-
-# Ensure Quarto internal cache/metadata stays out, 
-# even if it's inside a whitelisted folder
-/.quarto/
+# History and Session Data
 .Rhistory
 .RData
 .Rproj.user
+
+# Quarto internal folders
+/.quarto/
+_freeze/
+
+# Ignore large/local build artifacts in source folders 
+# (But keep the ones in /docs/ so the website works)
+**/*.html
+**/*.docx
+**/*.pptx
+**/*.pdf
+**/*.quarto_ipynb
+
+# Whitelist the /docs/ folder and its contents
+!/docs/
+!/docs/**

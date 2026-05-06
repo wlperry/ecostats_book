@@ -1,0 +1,21 @@
+# Location: /lectures/_metadata.yml
+
+execute:
+  message: false 
+  warning: false
+
+format:
+  html:
+ #   css: ../css/activity.css
+    format-links: [docx, pptx]   # <--- THIS ADDS THE "DOWNLOAD WORD" BUTTON!
+    max-width: 80ch
+    toc: false
+    fig-width: 5
+    fig-height: 5
+  revealjs:
+    css: ../css/lecture.css
+    theme: [default, ../css/theme.scss] 
+    slide-number: true
+    transition: fade
+  pptx:
+    reference-doc: ../ms_templates/lecture_template.pptx

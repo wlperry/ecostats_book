@@ -1,24 +1,15 @@
-# History and Session Data
+# Ignore everything in the root
+/*
+
+# Whitelist: Do NOT ignore these specific folders/files
+!/docs/
+!.gitignore
+!README.md
+!LICENSE
+
+# Ensure Quarto internal cache/metadata stays out, 
+# even if it's inside a whitelisted folder
+/.quarto/
 .Rhistory
 .RData
 .Rproj.user
-/.quarto/
-
-# Project folders to ignore
-/css/
-/data/
-/documents/
-/figures/
-/lectures/
-/ms_templates/
-/about_cache/
-/test_overviews/
-
-# THE WEBSITE FOLDER
-# We do NOT ignore /docs/ because that is your website
-!/docs/
-
-# File types to ignore
-*.qmd
-*.txt
-**/*.quarto_ipynb

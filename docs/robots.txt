@@ -1,1 +1,1 @@
-Sitemap: https://your-site-url.github.io/sitemap.xml
+Sitemap: https://wlperry.github.io/ecostats_2026/sitemap.xml

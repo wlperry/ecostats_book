@@ -4,14 +4,19 @@ project:
 
 website:
   title: "UMD Biostatistics"
-  site-url: "https://your-site-url.github.io"
+  site-url: "https://wlperry.github.io/ecostats_2026"
   search: true
+  favicon: "favicon.png" # Added your favicon here!
 
   sidebar:
     logo: "images/course-hex.png"
     style: "docked"
     collapse-level: 1
     contents:
+      # Clear link back to your main personal site at the top
+      - text: "← Back to Homepage"
+        href: https://wlperry.github.io/index.html
+        
       - section: "Course Information"
         contents:
           - href: index.qmd
@@ -31,7 +36,7 @@ website:
             text: "Activities"
           - href: homeworks/index.qmd
             text: "Homeworks"
-          - href: assingments/index.qmd
+          - href: assignments/index.qmd
             text: "Assignments"
           - href: vignettes/index.qmd
             text: "Vignettes"

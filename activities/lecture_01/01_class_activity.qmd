@@ -1,4 +1,8 @@
 ---
+title: "01 class activity"
+---
+
+---
 metadata-files:
   - ../../_templates/activities.yml
 format:

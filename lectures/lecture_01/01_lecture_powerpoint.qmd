@@ -66,7 +66,7 @@ Zar (1999) - "analysis and interpretation of data with view towards objective ev
 :::
 :::::
 
-# **Lecture 1:** Inductive reasoning (Specific → General)
+# **Lecture 1:** Inductive reasoning  (Specific → General)
 
 ::::: columns
 ::: {.column width="60%"}

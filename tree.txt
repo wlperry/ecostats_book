@@ -187,7 +187,7 @@
 ├── admin
 │   ├── overview.qmd
 │   └── syllabus.qmd
-├── assingments
+├── assignments
 │   ├── _metadata.yml
 │   ├── assignment_01
 │   │   ├── assigment_01_example.qmd
@@ -308,7 +308,7 @@
 │   │   ├── overview.html
 │   │   ├── syllabus.docx
 │   │   └── syllabus.html
-│   ├── assingments
+│   ├── assignments
 │   │   ├── assignment_01
 │   │   ├── assignment_02
 │   │   ├── assignment_03
@@ -317,6 +317,7 @@
 │   ├── css
 │   │   ├── activity.css
 │   │   └── lecture.css
+│   ├── favicon.png
 │   ├── homeworks
 │   │   ├── hw_1_r
 │   │   ├── hw_10_ancova
@@ -624,49 +625,51 @@
 ├── styles.css
 ├── syllabus.qmd
 ├── tree.txt
-└── vignettes
-    ├── _metadata.yml
-    ├── 01_t_tests_parametric
-    │   ├── 01_two_sample_ttest.qmd
-    │   ├── 01_two_sample_ttest.r
-    │   ├── 01_two_sample_ttest.revealjs.md
-    │   └── data
-    ├── 02_t_tests_nonparametric
-    │   ├── 02_two_sample_welches_ttest.qmd
-    │   ├── 02_welches_ttest_script.r
-    │   ├── 03_mann_whitney_script.r
-    │   ├── 03_two_sample_mann_whitney_u_test.qmd
-    │   └── data
-    ├── 03_correlation
-    │   ├── 04_correlation_analysis_script.r
-    │   ├── 04_correlation_analysis.qmd
-    │   ├── 04_correlation_analysis.revealjs.md
-    │   ├── 04_correlation.r
-    │   └── data
-    ├── 04_regession
-    │   ├── 05_linear_regression_script.r
-    │   ├── 05_linear_regression.qmd
-    │   ├── 06_linear_regression_as_std_curve.qmd
-    │   ├── 06_std_curve_regression_script.r
-    │   ├── data
-    │   ├── deet_model_summary.csv
-    │   └── deet_regression_with_diagnostics.csv
-    ├── 05_multiple_linear_regression
-    │   ├── 07_multiple_linear_regression.qmd
-    │   ├── 07_multiple_regression_script.r
-    │   └── data
-    ├── 06_oneway_anova
-    │   ├── 08_one_way_anova_script.r
-    │   ├── 08_one_way_ANOVA.qmd
-    │   └── data
-    ├── 07_two_factor_anova
-    │   └── data
-    ├── 08_lmm
-    │   └── data
-    ├── 09_PCA
-    │   └── data
-    ├── 10_nmdh
-    ├── index.qmd
-    └── vignettes_index.qmd
+├── vignettes
+│   ├── _metadata.yml
+│   ├── 01_t_tests_parametric
+│   │   ├── 01_two_sample_ttest.qmd
+│   │   ├── 01_two_sample_ttest.r
+│   │   ├── 01_two_sample_ttest.revealjs.md
+│   │   └── data
+│   ├── 02_t_tests_nonparametric
+│   │   ├── 02_two_sample_welches_ttest.qmd
+│   │   ├── 02_welches_ttest_script.r
+│   │   ├── 03_mann_whitney_script.r
+│   │   ├── 03_two_sample_mann_whitney_u_test.qmd
+│   │   └── data
+│   ├── 03_correlation
+│   │   ├── 04_correlation_analysis_script.r
+│   │   ├── 04_correlation_analysis.qmd
+│   │   ├── 04_correlation_analysis.revealjs.md
+│   │   ├── 04_correlation.r
+│   │   └── data
+│   ├── 04_regession
+│   │   ├── 05_linear_regression_script.r
+│   │   ├── 05_linear_regression.qmd
+│   │   ├── 06_linear_regression_as_std_curve.qmd
+│   │   ├── 06_std_curve_regression_script.r
+│   │   ├── data
+│   │   ├── deet_model_summary.csv
+│   │   └── deet_regression_with_diagnostics.csv
+│   ├── 05_multiple_linear_regression
+│   │   ├── 07_multiple_linear_regression.qmd
+│   │   ├── 07_multiple_regression_script.r
+│   │   └── data
+│   ├── 06_oneway_anova
+│   │   ├── 08_one_way_anova_script.r
+│   │   ├── 08_one_way_ANOVA.knit.docx
+│   │   ├── 08_one_way_ANOVA.qmd
+│   │   └── data
+│   ├── 07_two_factor_anova
+│   │   └── data
+│   ├── 08_lmm
+│   │   └── data
+│   ├── 09_PCA
+│   │   └── data
+│   ├── 10_nmdh
+│   ├── index.qmd
+│   └── vignettes_index.qmd
+└── web_ecostats_website_2026.Rproj
 
-370 directories, 300 files
+370 directories, 303 files

@@ -35,6 +35,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
 <link href="../favicon.png" rel="icon" type="image/png">
+<script src="../site_libs/quarto-listing/list.min.js"></script>
+<script src="../site_libs/quarto-listing/quarto-listing.js"></script>
 <script src="../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
 <script src="../site_libs/quarto-html/popper.min.js"></script>
@@ -76,7 +78,65 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
+<script>
 
+  window.document.addEventListener("DOMContentLoaded", function (_event) {
+    const listingTargetEl = window.document.querySelector('#listing-listing .list');
+    if (!listingTargetEl) {
+      // No listing discovered, do not attach.
+      return; 
+    }
+
+    const options = {
+      valueNames: ['listing-order','listing-week','listing-title','listing-description',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-title-sort'] }],
+      
+      searchColumns: ["listing-title","listing-author"],
+    };
+
+    window['quarto-listings'] = window['quarto-listings'] || {};
+    window['quarto-listings']['listing-listing'] = new List('listing-listing', options);
+
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  });
+
+  window.addEventListener('hashchange',() => {
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  })
+  </script>
+
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 <link rel="stylesheet" href="../css/main.css">
 <meta property="og:title" content="Common Statistical Tests – UMD Biostatistics">
@@ -249,7 +309,7 @@ ul.task-list li input[type="checkbox"] {
   </script>
 
 <div id="quarto-search-results"></div>
-  <header id="quarto-header" class="headroom fixed-top">
+  <header id="quarto-header" class="headroom fixed-top quarto-banner">
   <nav class="quarto-secondary-nav">
     <div class="container-fluid d-flex">
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
@@ -265,7 +325,29 @@ ul.task-list li input[type="checkbox"] {
   </nav>
 </header>
 <!-- content -->
-<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<header id="title-block-header" class="quarto-title-block default page-columns page-full">
+  <div class="quarto-title-banner page-columns page-full">
+    <div class="quarto-title column-body"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../lectures/index.html">Course Materials</a></li><li class="breadcrumb-item"><a href="../vignettes/index.html">Vignettes</a></li></ol></nav>
+      <h1 class="title">Common Statistical Tests</h1>
+                      </div>
+  </div>
+    
+  
+  <div class="quarto-title-meta column-body">
+
+      <div>
+      <div class="quarto-title-meta-heading">Author</div>
+      <div class="quarto-title-meta-contents">
+               <p>Bill Perry </p>
+            </div>
+    </div>
+      
+    
+      
+    </div>
+    
+  
+  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full">
 <!-- sidebar -->
   <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto">
     <div class="pt-lg-2 mt-2 text-left sidebar-header">
@@ -374,258 +456,182 @@ ul.task-list li input[type="checkbox"] {
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
     <div class="quarto-alternate-formats"><h2>Other Formats</h2><ul><li><a href="index.docx"><i class="bi bi-file-word"></i>MS Word</a></li></ul></div></div>
 <!-- main -->
-<main class="content" id="quarto-document-content">
+<main class="content quarto-banner-title-block column-body" id="quarto-document-content">
 
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../lectures/index.html">Course Materials</a></li><li class="breadcrumb-item"><a href="../vignettes/index.html">Vignettes</a></li></ol></nav>
-<div class="quarto-title">
-<h1 class="title">Common Statistical Tests</h1>
+
+
+
+
+<p>A reference guide to the common statistical tests we use in class — each is a worked example in R. This list is generated automatically from each vignette’s YAML frontmatter (<code>order:</code>, <code>week:</code>, <code>description:</code>); nothing here is hand-typed.</p>
+<p>Click a test to open its walkthrough. <strong>Every vignette page has a “📥 Download the R script” button at the top</strong>, so you can view the write-up and grab the runnable <code>.R</code> file directly.</p>
+
+
+
+
+<div class="quarto-listing quarto-listing-container-table" id="listing-listing">
+<div class="listing-actions-group">
+    <div class="input-group input-group-sm quarto-listing-filter">
+      <span class="input-group-text"><i class="bi bi-search"></i></span>
+      <input type="text" class="search form-control" placeholder="Filter">
+    </div>
 </div>
+<table class="quarto-listing-table table">
+<thead>
+<tr>
 
+<th>
+#
+</th>
 
+<th>
+Week
+</th>
 
-<div class="quarto-title-meta">
+<th>
+Statistical Test
+</th>
 
-    <div>
-    <div class="quarto-title-meta-heading">Author</div>
-    <div class="quarto-title-meta-contents">
-             <p>Bill Perry </p>
-          </div>
-  </div>
-    
-  
-    
-  </div>
-  
+<th>
+Description
+</th>
 
+</tr>
+</thead>
+<tbody class="list">
 
-</header>
+<tr data-index="0" data-listing-file-modified-sort="1783117040158" data-listing-reading-time-sort="11" data-listing-word-count-sort="2022" data-listing-order-sort="1" data-listing-title-sort="Two Sample T-Test" data-listing-filename-sort="two_sample_ttest.qmd">
+<td>
+<span class="listing-order">1</span>
+</td>
+<td>
+<span class="listing-week">1</span>
+</td>
+<td>
+<a href="../vignettes/01_01_two_sample_ttest_vignette/two_sample_ttest.html" class="title listing-title">Two Sample T-Test</a>
+</td>
+<td>
+<span class="listing-description">Parametric two-sample t-test walkthrough in R.</span>
+</td>
 
+</tr>
 
-<section id="common-statistical-tests-reference-guide" class="level1">
-<h1>Common Statistical Tests Reference Guide</h1>
-<p><strong>Author:</strong> Bill Perry</p>
-<p>This is a comprehensive list of the common statistical tests we have used in class. I hope this serves as a resource you can use in the future when you are doing data analysis.</p>
-<p>I have provided the common tests we have done with detailed information that will help you remember how to approach these questions and how to run the tests.</p>
-<hr>
-<section id="comparing-two-samples" class="level2">
-<h2 class="anchored" data-anchor-id="comparing-two-samples">Comparing Two Samples</h2>
-<section id="parametric-two-sample-t-test" class="level3">
-<h3 class="anchored" data-anchor-id="parametric-two-sample-t-test">Parametric Two Sample T-Test</h3>
-</section>
-<section id="parametric-two-sample-t-test-1" class="level3">
-<h3 class="anchored" data-anchor-id="parametric-two-sample-t-test-1">Parametric Two Sample T-Test</h3>
-<ul>
-<li><strong>Webpage:</strong> <a href="../vignettes/01_t_tests_parametric/01_two_sample_ttest.html" target="_blank">01_two_sample_ttest.qmd</a></li>
-<li><a href="01_t_tests_parametric/01_two_sample_ttest.r" class="btn.btn-primary">📥 Download R Script</a></li>
-<li><a href="01_t_tests_parametric/data/t_test_sculpin_s07_ne14.csv" class="btn btn-primary">📥 Download sculpin data</a></li>
-</ul>
-<p><strong>Data Types:</strong></p>
-<ul>
-<li><p><strong>X Variable:</strong> Categorical (2 groups/levels)</p></li>
-<li><p><strong>Y Variable:</strong> Continuous</p></li>
-</ul>
-<p><strong>Assumptions:</strong></p>
-<ol type="1">
-<li>Independence of observations</li>
-<li>Normal distribution of the dependent variable within each group</li>
-<li>Homogeneity of variance (equal variances between groups)</li>
-<li>Data should be approximately normally distributed</li>
-<li>No extreme outliers</li>
-</ol>
-<hr>
-</section>
-<section id="nonparametric-welchs-two-sample-test" class="level3">
-<h3 class="anchored" data-anchor-id="nonparametric-welchs-two-sample-test">Nonparametric Welch’s Two Sample Test</h3>
-</section>
-<section id="nonparametric-welchs-two-sample-test-1" class="level3">
-<h3 class="anchored" data-anchor-id="nonparametric-welchs-two-sample-test-1">Nonparametric Welch’s Two Sample Test</h3>
-<ul>
-<li><strong>Webpage:</strong> <a href="../vignettes/02_t_tests_nonparametric/02_two_sample_welches_ttest.html" target="_blank">02_two_sample_welches_ttest.qmd</a></li>
-<li><a href="02_t_tests_nonparametric/02_welches_ttest_script.r" class="btn.btn-primary">📥 Download R Script</a></li>
-<li><a href="02_t_tests_nonparametric/data/t_test_sculpin_s07_ne14.csv" class="btn btn-primary">📥 Download sculpin data</a></li>
-</ul>
-<p><strong>Data Types:</strong></p>
-<ul>
-<li><strong>X Variable:</strong> Categorical (2 groups/levels)</li>
-<li><strong>Y Variable:</strong> Continuous</li>
-</ul>
-<p><strong>Assumptions:</strong></p>
-<ol type="1">
-<li>Independence of observations</li>
-<li>Normal distribution of the dependent variable within each group</li>
-<li>Does NOT assume equal variances (this is the key difference from standard t-test)</li>
-<li>Data should be approximately normally distributed</li>
-<li>No extreme outliers</li>
-</ol>
-<hr>
-</section>
-<section id="nonparametric-mann-whitney-u-two-sample-test" class="level3">
-<h3 class="anchored" data-anchor-id="nonparametric-mann-whitney-u-two-sample-test">Nonparametric Mann-Whitney U Two Sample Test</h3>
-</section>
-<section id="nonparametric-mann-whitney-u-two-sample-test-1" class="level3">
-<h3 class="anchored" data-anchor-id="nonparametric-mann-whitney-u-two-sample-test-1">Nonparametric Mann-Whitney U Two Sample Test</h3>
-<ul>
-<li><strong>Webpage:</strong> <a href="../vignettes/02_t_tests_nonparametric/03_two_sample_mann_whitney_u_test.html" target="_blank">03_two_sample_mann_whitney_u_test.qmd</a></li>
-<li><a href="02_t_tests_nonparametric/03_mann_whitney_script.r" class="btn btn-primary">📥 Download R Script</a></li>
-<li><a href="02_t_tests_nonparametric/data/t_test_sculpin_s07_ne14.csv" class="btn btn-primary">📥 Download sculpin data</a></li>
-</ul>
-<p><strong>Data Types:</strong></p>
-<ul>
-<li><strong>X Variable:</strong> Categorical (2 groups/levels)</li>
-<li><strong>Y Variable:</strong> Ordinal or continuous (can handle non-normal distributions)</li>
-</ul>
-<p><strong>Assumptions:</strong></p>
-<ol type="1">
-<li>Independence of observations</li>
-<li>Ordinal or continuous dependent variable</li>
-<li>Does NOT require normal distribution</li>
-<li>Does NOT require equal variances</li>
-<li>The two groups should have similar distribution shapes for meaningful comparison of medians</li>
-<li>No tied ranks (or minimal ties)</li>
-</ol>
-<hr>
-</section>
-</section>
-<section id="relationships-between-two-samples" class="level2">
-<h2 class="anchored" data-anchor-id="relationships-between-two-samples">Relationships Between Two Samples</h2>
-<section id="correlation" class="level3">
-<h3 class="anchored" data-anchor-id="correlation">Correlation</h3>
-</section>
-<section id="correlation-1" class="level3">
-<h3 class="anchored" data-anchor-id="correlation-1">Correlation</h3>
-<ul>
-<li><strong>Webpage:</strong> <a href="../vignettes/03_correlation/04_correlation_analysis.html" target="_blank">04_correlation.qmd</a></li>
-<li><a href="03_correlation/04_correlation_analysis_script.r" class="btn btn-primary">📥 Download R Script</a></li>
-<li><a href="03_correlation/data/mms_peanut.csv" class="btn btn-primary">📥 Download m&amp;m peanut data</a></li>
-</ul>
-<p><strong>Data Types:</strong></p>
-<ul>
-<li><strong>X Variable:</strong> Continuous</li>
-<li><strong>Y Variable:</strong> Continuous</li>
-</ul>
-<p><strong>Assumptions of Pearson Correlation:</strong></p>
-<ol type="1">
-<li>Linearity: The relationship between variables is linear</li>
-<li>Bivariate normality: Both variables are normally distributed</li>
-<li>Independence: Observations are independent of each other</li>
-</ol>
-</section>
-<section id="alternative-non-parametric-correlation" class="level3">
-<h3 class="anchored" data-anchor-id="alternative-non-parametric-correlation">Alternative: Non-parametric Correlation</h3>
-<p><strong>Data Types:</strong></p>
-<ul>
-<li><strong>X Variable:</strong> Continuous or ordinal</li>
-<li><strong>Y Variable:</strong> Continuous</li>
-</ul>
-<section id="when-to-use-spearmans-correlation" class="level4">
-<h4 class="anchored" data-anchor-id="when-to-use-spearmans-correlation">When to Use Spearman’s Correlation</h4>
-<p>Use Spearman’s rank correlation when:</p>
-<ol type="1">
-<li>Data are not normally distributed</li>
-<li>The relationship is monotonic but not necessarily linear</li>
-<li>Data contain outliers that affect Pearson’s correlation</li>
-<li>Working with ordinal data</li>
-</ol>
-<hr>
-</section>
-</section>
-<section id="linear-regression" class="level3">
-<h3 class="anchored" data-anchor-id="linear-regression">Linear Regression</h3>
-</section>
-<section id="linear-regression-1" class="level3">
-<h3 class="anchored" data-anchor-id="linear-regression-1">Linear Regression</h3>
-<ul>
-<li><strong>Webpage:</strong> <a href="../vignettes/04_regession/05_linear_regression.html" target="_blank">05_linear_regression.qmd</a></li>
-<li><a href="04_regession/05_linear_regression_script.r" class="btn btn-primary">📥 Download R Script</a></li>
-<li><a href="04_regession/data/chap17q30DEETMosquiteBites.csv" class="btn btn-primary">📥 Download mozzie data</a></li>
-</ul>
-<p><strong>Data Types:</strong></p>
-<ul>
-<li><strong>X Variable:</strong> Continuous or ordinal</li>
-<li><strong>Y Variable:</strong> Continuous</li>
-</ul>
-<p><strong>Assumptions of Linear Regression:</strong></p>
-<ol type="1">
-<li><strong>Linearity</strong>: The relationship between DEET concentration and mosquito bites is linear</li>
-<li><strong>Independence</strong>: Observations are independent of each other</li>
-<li><strong>Homoscedasticity</strong>: Constant variance of residuals across all DEET concentrations</li>
-<li><strong>Normality</strong>: Residuals are normally distributed</li>
-</ol>
-<hr>
-</section>
-<section id="linear-regression-with-standard-curve" class="level3">
-<h3 class="anchored" data-anchor-id="linear-regression-with-standard-curve">Linear Regression with standard curve</h3>
-<ul>
-<li><strong>Webpage:</strong> <a href="../vignettes/04_regession/06_linear_regression_as_std_curve.html" target="_blank">06_linear_regression_as_std_curve.qmd</a></li>
-<li><a href="04_regression/data/chap17paperweights.xlsx" class="btn btn-primary">📥 Download paper weights</a></li>
-<li><a href="04_regression/data/leaf_trace_masses.xlsx" class="btn btn-primary">📥 Download leaf traces</a></li>
-</ul>
-<p><strong>Data Types:</strong></p>
-<ul>
-<li><strong>X Variable:</strong> Continuous or ordinal</li>
-<li><strong>Y Variable:</strong> Continuous</li>
-</ul>
-<p><strong>Assumptions of Linear Regression:</strong></p>
-<ol type="1">
-<li><strong>Linearity</strong>: The relationship between DEET concentration and mosquito bites is linear</li>
-<li><strong>Independence</strong>: Observations are independent of each other</li>
-<li><strong>Homoscedasticity</strong>: Constant variance of residuals across all DEET concentrations</li>
-<li><strong>Normality</strong>: Residuals are normally distributed</li>
-</ol>
-<hr>
-</section>
-<section id="multiple-regression" class="level3">
-<h3 class="anchored" data-anchor-id="multiple-regression">Multiple Regression</h3>
-<ul>
-<li><strong>Webpage:</strong> <a href="../vignettes/05_multiple_linear_regression/07_multiple_linear_regression.html" target="_blank">07_multiple_linear_regression.qmd</a></li>
-<li><a href="05_multiple_linear_regression/07_multiple_regression_script.r" class="btn btn-primary">📥 Download R Script</a></li>
-<li><a href="05_multiple_linear_regression/data/AntSpeciesDensity.csv" class="btn btn-primary">📥 Download ants.csv</a></li>
-</ul>
-<p><strong>Data Types:</strong></p>
-<ul>
-<li><strong>X1 Variable:</strong> Continuous</li>
-<li><strong>X2 Variable: Continuous</strong></li>
-<li><strong>Y Variable:</strong> Continuous</li>
-</ul>
-<p><strong>Assumptions of Multiple Linear Regression</strong></p>
-<ol type="1">
-<li>Linearity: Linear relationships between Y and each X, and Y and the combination of X’s</li>
-<li>Independence: Observations are independent</li>
-<li>Homoscedasticity: Constant variance of residuals</li>
-<li>Normality: Residuals are normally distributed</li>
-<li>No multicollinearity: Predictor variables are not highly correlated with each other</li>
-<li>Sufficient sample size: Generally need at least 10-20 observations per predictor</li>
-</ol>
-<hr>
-</section>
-<section id="one-way-anova" class="level3">
-<h3 class="anchored" data-anchor-id="one-way-anova">One Way ANOVA</h3>
-<ul>
-<li><strong>Webpage:</strong> <a href="../vignettes/06_oneway_anova/08_one_way_ANOVA.html" target="_blank">08_one_way_ANOVA.qmd</a><span target="_blank">.qmd</span></li>
-<li><a href="06_oneway_anova/08_one_way_anova_script.r" class="btn btn-primary">📥 Download R Script</a></li>
-<li><a href="06_oneway_anova/data/mms.csv" class="btn btn-primary">📥 Download mms.csv</a></li>
-</ul>
-<p><strong>Data Types:</strong></p>
-<ul>
-<li><strong>X Variable:</strong> Categorical</li>
-<li><strong>Y Variable:</strong> Continuous</li>
-</ul>
-<p><strong>Assumptions:</strong></p>
-<ol type="1">
-<li>Independence: Observations within and between groups are independent</li>
-<li>Normality: The residuals are normally distributed</li>
-<li>Homogeneity of variances: The variances are equal across all groups</li>
-</ol>
-<hr>
-<p><em>This guide will be expanded as we cover additional statistical tests throughout the course.</em></p>
+<tr data-index="1" data-listing-file-modified-sort="1783117040158" data-listing-reading-time-sort="9" data-listing-word-count-sort="1760" data-listing-order-sort="2" data-listing-title-sort="Two Sample Mann_Whitney Test" data-listing-filename-sort="03_two_sample_mann_whitney_u_test.qmd">
+<td>
+<span class="listing-order">2</span>
+</td>
+<td>
+<span class="listing-week">2</span>
+</td>
+<td>
+<a href="../vignettes/02_02_welch_ttest_vignette/03_two_sample_mann_whitney_u_test.html" class="title listing-title">Two Sample Mann_Whitney Test</a>
+</td>
+<td>
+<span class="listing-description"><!-- desc(5A0113B34292)[max=175]:vignettes/02_02_welch_ttest_vignette/03_two_sample_mann_whitney_u_test.html --></span>
+</td>
 
+</tr>
 
-</section>
-</section>
-</section>
+<tr data-index="2" data-listing-file-modified-sort="1783117040158" data-listing-reading-time-sort="12" data-listing-word-count-sort="2244" data-listing-order-sort="2" data-listing-title-sort="Welch's Two Sample T-Test" data-listing-filename-sort="welch_ttest.qmd">
+<td>
+<span class="listing-order">2</span>
+</td>
+<td>
+<span class="listing-week">2</span>
+</td>
+<td>
+<a href="../vignettes/02_02_welch_ttest_vignette/welch_ttest.html" class="title listing-title">Welch’s Two Sample T-Test</a>
+</td>
+<td>
+<span class="listing-description">Welch’s (unequal-variance) two-sample t-test in R.</span>
+</td>
 
-</main> <!-- /main -->
+</tr>
+
+<tr data-index="3" data-listing-file-modified-sort="1783117040159" data-listing-reading-time-sort="8" data-listing-word-count-sort="1585" data-listing-order-sort="3" data-listing-title-sort="Correlation Analysis" data-listing-filename-sort="correlation.qmd">
+<td>
+<span class="listing-order">3</span>
+</td>
+<td>
+<span class="listing-week">3</span>
+</td>
+<td>
+<a href="../vignettes/03_03_correlation_vignette/correlation.html" class="title listing-title">Correlation Analysis</a>
+</td>
+<td>
+<span class="listing-description">Correlation analysis in R.</span>
+</td>
+
+</tr>
+
+<tr data-index="4" data-listing-file-modified-sort="1783117040159" data-listing-reading-time-sort="13" data-listing-word-count-sort="2456" data-listing-order-sort="4" data-listing-title-sort="Linear Regression Analysis - Paperweight Calibration for Leaf Area Estimation" data-listing-filename-sort="06_linear_regression_as_std_curve.qmd">
+<td>
+<span class="listing-order">4</span>
+</td>
+<td>
+<span class="listing-week">4</span>
+</td>
+<td>
+<a href="../vignettes/04_04_linear_regression_vignette/06_linear_regression_as_std_curve.html" class="title listing-title">Linear Regression Analysis - Paperweight Calibration for Leaf Area Estimation</a>
+</td>
+<td>
+<span class="listing-description"><!-- desc(5A0113B34292)[max=175]:vignettes/04_04_linear_regression_vignette/06_linear_regression_as_std_curve.html --></span>
+</td>
+
+</tr>
+
+<tr data-index="5" data-listing-file-modified-sort="1783117040159" data-listing-reading-time-sort="12" data-listing-word-count-sort="2341" data-listing-order-sort="4" data-listing-title-sort="Linear Regression" data-listing-filename-sort="linear_regression.qmd">
+<td>
+<span class="listing-order">4</span>
+</td>
+<td>
+<span class="listing-week">4</span>
+</td>
+<td>
+<a href="../vignettes/04_04_linear_regression_vignette/linear_regression.html" class="title listing-title">Linear Regression</a>
+</td>
+<td>
+<span class="listing-description">Simple linear regression in R.</span>
+</td>
+
+</tr>
+
+<tr data-index="6" data-listing-file-modified-sort="1783117040160" data-listing-reading-time-sort="14" data-listing-word-count-sort="2683" data-listing-order-sort="5" data-listing-title-sort="Multiple Linear Regression" data-listing-filename-sort="multiple_linear_regression.qmd">
+<td>
+<span class="listing-order">5</span>
+</td>
+<td>
+<span class="listing-week">5</span>
+</td>
+<td>
+<a href="../vignettes/05_05_multiple_linear_regression_vignette/multiple_linear_regression.html" class="title listing-title">Multiple Linear Regression</a>
+</td>
+<td>
+<span class="listing-description">Multiple linear regression in R.</span>
+</td>
+
+</tr>
+
+<tr data-index="7" data-listing-file-modified-sort="1783117040160" data-listing-reading-time-sort="14" data-listing-word-count-sort="2649" data-listing-order-sort="6" data-listing-title-sort="One-Way ANOVA" data-listing-filename-sort="one_way_anova.qmd">
+<td>
+<span class="listing-order">6</span>
+</td>
+<td>
+<span class="listing-week">6</span>
+</td>
+<td>
+<a href="../vignettes/06_06_one_way_anova_vignette/one_way_anova.html" class="title listing-title">One-Way ANOVA</a>
+</td>
+<td>
+<span class="listing-description">One-way analysis of variance in R.</span>
+</td>
+
+</tr>
+
+</tbody>
+</table>
+<div class="listing-no-matching d-none">No matching items</div>
+</div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     // Ensure there is a toggle, if there isn't float one in the top right

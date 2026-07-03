@@ -21,7 +21,7 @@
 # add/remove folders this applies to).
 # =====================================================================
 
-TARGET_DIRS <- c("lectures", "activities", "homeworks")
+TARGET_DIRS <- c("lectures", "activities", "homeworks", "vignettes")
 
 FOLDER_PATTERN <- "^([0-9]{2})_([0-9]{2})_"
 

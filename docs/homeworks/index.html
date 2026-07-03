@@ -6,6 +6,7 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="author" content="Bill Perry">
 
 <title>Homework Assignments – UMD Biostatistics</title>
 <style>
@@ -87,9 +88,9 @@ ul.task-list li input[type="checkbox"] {
     }
 
     const options = {
-      valueNames: ['listing-title','listing-author','listing-image','listing-description','listing-categories',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
+      valueNames: ['listing-order','listing-week','listing-title','listing-description',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-title-sort'] }],
       
-      searchColumns: ["listing-title","listing-author","listing-image","listing-description","listing-categories"],
+      searchColumns: ["listing-title","listing-author"],
     };
 
     window['quarto-listings'] = window['quarto-listings'] || {};
@@ -334,6 +335,12 @@ window.Quarto = {
   
   <div class="quarto-title-meta column-body">
 
+      <div>
+      <div class="quarto-title-meta-heading">Author</div>
+      <div class="quarto-title-meta-contents">
+               <p>Bill Perry </p>
+            </div>
+    </div>
       
     
       
@@ -447,7 +454,7 @@ window.Quarto = {
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">All <span class="quarto-category-count">(10)</span></div></div><div class="quarto-alternate-formats"><h2>Other Formats</h2><ul><li><a href="index.docx"><i class="bi bi-file-word"></i>MS Word</a></li></ul></div></div>
+    <div class="quarto-alternate-formats"><h2>Other Formats</h2><ul><li><a href="index.docx"><i class="bi bi-file-word"></i>MS Word</a></li></ul></div></div>
 <!-- main -->
 <main class="content quarto-banner-title-block column-body" id="quarto-document-content">
 
@@ -456,210 +463,204 @@ window.Quarto = {
 
 
 
-<p>Homework assignments are posted here. Click on an assignment to view the details, due dates, and submission instructions.</p>
+<p>Homework assignments are posted here, pulled straight from each file’s YAML frontmatter (<code>order:</code>, <code>week:</code>, <code>description:</code>) — nothing on this page is hand-typed. Ordering comes from the <code>order:</code> field, filled in automatically by the <code>sync_order_from_folder_names.R</code> pre-render hook from each folder’s <code>WW_MM_</code> number prefix. Click one to view the details, due dates, and submission instructions.</p>
 
 
 
 
-<div class="quarto-listing quarto-listing-container-grid" id="listing-listing">
+<div class="quarto-listing quarto-listing-container-table" id="listing-listing">
 <div class="listing-actions-group">
     <div class="input-group input-group-sm quarto-listing-filter">
       <span class="input-group-text"><i class="bi bi-search"></i></span>
       <input type="text" class="search form-control" placeholder="Filter">
     </div>
 </div>
-<div class="list grid quarto-listing-cols-3">
-<div class="g-col-1" data-index="0" data-listing-file-modified-sort="1778027751000" data-listing-reading-time-sort="3" data-listing-word-count-sort="455">
-<a href="../homeworks/hw_1_r/01_homework_intro.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<p class="card-img-top"><img loading='lazy' src="hw_1_r/images/images_01/grayling.jpeg" style="height: 150px;"  class="thumbnail-image card-img"/></p>
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-01_Homework_intro
-</h5>
-<div class="card-text listing-description delink">
-This is an assignment for you to practice the code and all the work we do in class on a different dataframe with a few twists to challenge you a bit. We will assign one of…
-</div>
-<div class="card-attribution card-text-small start">
-<div class="listing-author">
-Bill Perry
-</div>
-</div>
-</div>
-</div></a>
-</div>
-<div class="g-col-1" data-index="1" data-listing-file-modified-sort="1778027751000" data-listing-reading-time-sort="4" data-listing-word-count-sort="774">
-<a href="../homeworks/hw_2_desc_stats/02_homework_stats.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<p class="card-img-top"><img loading='lazy' src="hw_2_desc_stats/images/images_02/lake_trout.jpg" style="height: 150px;"  class="thumbnail-image card-img"/></p>
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-02_Homework_stats
-</h5>
-<div class="card-text listing-description delink">
-This is an assignment for you to practice coding and redo the work we do in class with a few twists on a new dataframe practicing to create new projects and writing new…
-</div>
-<div class="card-attribution card-text-small start">
-<div class="listing-author">
-Bill Perry
-</div>
-</div>
-</div>
-</div></a>
-</div>
-<div class="g-col-1" data-index="2" data-listing-file-modified-sort="1778027751000" data-listing-reading-time-sort="5" data-listing-word-count-sort="945">
-<a href="../homeworks/hw_3_ttest/03_homework_t_test.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<p class="card-img-top"><img loading='lazy' src="hw_3_ttest/images/images_03/mouse_islands.jpg" style="height: 150px;"  class="thumbnail-image card-img"/></p>
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-03_Homework_t_test
-</h5>
-<div class="card-text listing-description delink">
-The goal of this assignment is to begin doing statistical tests and we are starting with T Tests. From here on out there should be a rather standard format for these sorts…
-</div>
-<div class="card-attribution card-text-small start">
-<div class="listing-author">
-Bill Perry
-</div>
-</div>
-</div>
-</div></a>
-</div>
-<div class="g-col-1" data-index="3" data-listing-file-modified-sort="1778027751000" data-listing-reading-time-sort="4" data-listing-word-count-sort="608">
-<a href="../homeworks/hw_4_nonpar/04_homework_nonparametric.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<div class="listing-item-img-placeholder card-img-top" style="height: 150px;">&nbsp;</div>
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-04_homework_nonparametric_t_test
-</h5>
-<div class="card-text listing-description delink">
-This assignment is based on Graham &amp; Angilletta (2022) <em>“Distinguishing between unreliability and dishonesty: A comparative study of aggressive communication in crayfish”</em> publ…
-</div>
-<div class="card-attribution card-text-small start">
-<div class="listing-author">
-Bill Perry
-</div>
-</div>
-</div>
-</div></a>
-</div>
-<div class="g-col-1" data-index="4" data-listing-file-modified-sort="1778027751000" data-listing-reading-time-sort="6" data-listing-word-count-sort="1146">
-<a href="../homeworks/hw_5_corr_reg/05_homework_correlation_regression.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<div class="listing-item-img-placeholder card-img-top" style="height: 150px;">&nbsp;</div>
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-05_homeowork_correlation_regression
-</h5>
-<div class="card-text listing-description delink">
-This homework assignment will test your understanding of correlation and regression analysis using real forest inventory data from European beech (<em>Fagus sylvatica</em>) trees.…
-</div>
-<div class="card-attribution card-text-small start">
-<div class="listing-author">
-Bill Perry
-</div>
-</div>
-</div>
-</div></a>
-</div>
-<div class="g-col-1" data-index="5" data-listing-file-modified-sort="1778027751000" data-listing-reading-time-sort="9" data-listing-word-count-sort="1723">
-<a href="../homeworks/hw_6_mult_reg/06_homework_multiple_regression.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<div class="listing-item-img-placeholder card-img-top" style="height: 150px;">&nbsp;</div>
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-06_homework_multiple_regression
-</h5>
-<div class="card-text listing-description delink">
-This homework assignment will test your understanding of <strong>multiple regression analysis</strong> using real lake water quality data from New Zealand. You will analyze the relationships…
-</div>
-<div class="card-attribution card-text-small start">
-<div class="listing-author">
-Bill Perry
-</div>
-</div>
-</div>
-</div></a>
-</div>
-<div class="g-col-1" data-index="6" data-listing-file-modified-sort="1778027751000" data-listing-reading-time-sort="5" data-listing-word-count-sort="863">
-<a href="../homeworks/hw_7_one_way_anova/07_homework_one_way_anova.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<div class="listing-item-img-placeholder card-img-top" style="height: 150px;">&nbsp;</div>
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-07_homework_one_way_anova
-</h5>
-<div class="card-text listing-description delink">
-This homework assignment analyzes crayfish growth data from Sargent and Lodge (2014) to examine differences in growth rates between native and invasive populations of rusty…<em></em>
-</div>
-<div class="card-attribution card-text-small start">
-<div class="listing-author">
-Bill Perry
-</div>
-</div>
-</div>
-</div></a>
-</div>
-<div class="g-col-1" data-index="7" data-listing-file-modified-sort="1778027751000" data-listing-reading-time-sort="7" data-listing-word-count-sort="1210">
-<a href="../homeworks/hw_8_factorial_anova/08_homework_factorial_anova.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<div class="listing-item-img-placeholder card-img-top" style="height: 150px;">&nbsp;</div>
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-08_homework_factorial_anova
-</h5>
-<div class="card-text listing-description delink">
-This homework assignment analyzes crayfish growth data from Sargent and Lodge (2014) to examine differences in growth rates between native and invasive populations of rusty…<em></em>
-</div>
-<div class="card-attribution card-text-small start">
-<div class="listing-author">
-Bill Perry
-</div>
-</div>
-</div>
-</div></a>
-</div>
-<div class="g-col-1" data-index="8" data-listing-file-modified-sort="1778119823000" data-listing-reading-time-sort="4" data-listing-word-count-sort="632">
-<a href="../homeworks/hw_9_lmm/09_homework_lmm.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<div class="listing-item-img-placeholder card-img-top" style="height: 150px;">&nbsp;</div>
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-09_homework_lmm_anova
-</h5>
-<div class="card-text listing-description delink">
-This homework assignment analyzes crayfish growth data from Sargent and Lodge (2014) to examine differences in growth rates between native and invasive populations of rusty…<em></em>
-</div>
-<div class="card-attribution card-text-small start">
-<div class="listing-author">
-Bill Perry
-</div>
-</div>
-</div>
-</div></a>
-</div>
-<div class="g-col-1" data-index="9" data-listing-file-modified-sort="1778027751000" data-listing-reading-time-sort="4" data-listing-word-count-sort="798">
-<a href="../homeworks/hw_10_ancova/10_homework_ancova.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<div class="listing-item-img-placeholder card-img-top" style="height: 150px;">&nbsp;</div>
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-10_homework_ANCOVA
-</h5>
-<div class="card-text listing-description delink">
-This homework assignment focuses on Analysis of Covariance (ANCOVA) to examine the relationship between temperature and cricket chirp rate across two different cricket…
-</div>
-<div class="card-attribution card-text-small start">
-<div class="listing-author">
-Bill Perry
-</div>
-</div>
-</div>
-</div></a>
-</div>
-</div>
+<table class="quarto-listing-table table">
+<thead>
+<tr>
+
+<th>
+Homework #
+</th>
+
+<th>
+Week
+</th>
+
+<th>
+Homework
+</th>
+
+<th>
+Description
+</th>
+
+</tr>
+</thead>
+<tbody class="list">
+
+<tr data-index="0" data-listing-file-modified-sort="1783117040155" data-listing-reading-time-sort="3" data-listing-word-count-sort="455" data-listing-order-sort="1" data-listing-title-sort="Homework 1 — Intro to R" data-listing-filename-sort="intro_r_homework.qmd">
+<td>
+<span class="listing-order">1</span>
+</td>
+<td>
+<span class="listing-week">1</span>
+</td>
+<td>
+<a href="../homeworks/01_01_intro_r_homework/intro_r_homework.html" class="title listing-title">Homework 1 — Intro to R</a>
+</td>
+<td>
+<span class="listing-description">Getting started with R: objects, packages, and scripts.</span>
+</td>
+
+</tr>
+
+<tr data-index="1" data-listing-file-modified-sort="1783117040155" data-listing-reading-time-sort="4" data-listing-word-count-sort="774" data-listing-order-sort="2" data-listing-title-sort="Homework 2 — Descriptive Statistics" data-listing-filename-sort="descriptive_stats_homework.qmd">
+<td>
+<span class="listing-order">2</span>
+</td>
+<td>
+<span class="listing-week">2</span>
+</td>
+<td>
+<a href="../homeworks/02_02_descriptive_stats_homework/descriptive_stats_homework.html" class="title listing-title">Homework 2 — Descriptive Statistics</a>
+</td>
+<td>
+<span class="listing-description">Summaries and descriptive statistics in R.</span>
+</td>
+
+</tr>
+
+<tr data-index="2" data-listing-file-modified-sort="1783117040155" data-listing-reading-time-sort="5" data-listing-word-count-sort="945" data-listing-order-sort="3" data-listing-title-sort="Homework 3 — T-Tests" data-listing-filename-sort="t_test_homework.qmd">
+<td>
+<span class="listing-order">3</span>
+</td>
+<td>
+<span class="listing-week">3</span>
+</td>
+<td>
+<a href="../homeworks/03_03_t_test_homework/t_test_homework.html" class="title listing-title">Homework 3 — T-Tests</a>
+</td>
+<td>
+<span class="listing-description">One- and two-sample t-tests.</span>
+</td>
+
+</tr>
+
+<tr data-index="3" data-listing-file-modified-sort="1783117040156" data-listing-reading-time-sort="4" data-listing-word-count-sort="608" data-listing-order-sort="4" data-listing-title-sort="Homework 4 — Non-Parametric Tests" data-listing-filename-sort="nonparametric_homework.qmd">
+<td>
+<span class="listing-order">4</span>
+</td>
+<td>
+<span class="listing-week">4</span>
+</td>
+<td>
+<a href="../homeworks/04_04_nonparametric_homework/nonparametric_homework.html" class="title listing-title">Homework 4 — Non-Parametric Tests</a>
+</td>
+<td>
+<span class="listing-description">Rank-based alternatives to t-tests.</span>
+</td>
+
+</tr>
+
+<tr data-index="4" data-listing-file-modified-sort="1783117040156" data-listing-reading-time-sort="6" data-listing-word-count-sort="1146" data-listing-order-sort="5" data-listing-title-sort="Homework 5 — Correlation &amp; Regression" data-listing-filename-sort="correlation_regression_homework.qmd">
+<td>
+<span class="listing-order">5</span>
+</td>
+<td>
+<span class="listing-week">5</span>
+</td>
+<td>
+<a href="../homeworks/05_05_correlation_regression_homework/correlation_regression_homework.html" class="title listing-title">Homework 5 — Correlation &amp; Regression</a>
+</td>
+<td>
+<span class="listing-description">Correlation and simple linear regression.</span>
+</td>
+
+</tr>
+
+<tr data-index="5" data-listing-file-modified-sort="1783117040156" data-listing-reading-time-sort="9" data-listing-word-count-sort="1723" data-listing-order-sort="6" data-listing-title-sort="Homework 6 — Multiple Regression" data-listing-filename-sort="multiple_regression_homework.qmd">
+<td>
+<span class="listing-order">6</span>
+</td>
+<td>
+<span class="listing-week">6</span>
+</td>
+<td>
+<a href="../homeworks/06_06_multiple_regression_homework/multiple_regression_homework.html" class="title listing-title">Homework 6 — Multiple Regression</a>
+</td>
+<td>
+<span class="listing-description">Multiple linear regression.</span>
+</td>
+
+</tr>
+
+<tr data-index="6" data-listing-file-modified-sort="1783117040156" data-listing-reading-time-sort="5" data-listing-word-count-sort="863" data-listing-order-sort="7" data-listing-title-sort="Homework 7 — One-Way ANOVA" data-listing-filename-sort="one_way_anova_homework.qmd">
+<td>
+<span class="listing-order">7</span>
+</td>
+<td>
+<span class="listing-week">6</span>
+</td>
+<td>
+<a href="../homeworks/06_07_one_way_anova_homework/one_way_anova_homework.html" class="title listing-title">Homework 7 — One-Way ANOVA</a>
+</td>
+<td>
+<span class="listing-description">One-way analysis of variance.</span>
+</td>
+
+</tr>
+
+<tr data-index="7" data-listing-file-modified-sort="1783117040157" data-listing-reading-time-sort="7" data-listing-word-count-sort="1210" data-listing-order-sort="8" data-listing-title-sort="Homework 8 — Factorial ANOVA" data-listing-filename-sort="factorial_anova_homework.qmd">
+<td>
+<span class="listing-order">8</span>
+</td>
+<td>
+<span class="listing-week">7</span>
+</td>
+<td>
+<a href="../homeworks/07_08_factorial_anova_homework/factorial_anova_homework.html" class="title listing-title">Homework 8 — Factorial ANOVA</a>
+</td>
+<td>
+<span class="listing-description">Two-factor / factorial ANOVA.</span>
+</td>
+
+</tr>
+
+<tr data-index="8" data-listing-file-modified-sort="1783117040157" data-listing-reading-time-sort="4" data-listing-word-count-sort="632" data-listing-order-sort="9" data-listing-title-sort="Homework 9 — Linear Mixed Models" data-listing-filename-sort="lmm_homework.qmd">
+<td>
+<span class="listing-order">9</span>
+</td>
+<td>
+<span class="listing-week">7</span>
+</td>
+<td>
+<a href="../homeworks/07_09_lmm_homework/lmm_homework.html" class="title listing-title">Homework 9 — Linear Mixed Models</a>
+</td>
+<td>
+<span class="listing-description">Linear mixed models.</span>
+</td>
+
+</tr>
+
+<tr data-index="9" data-listing-file-modified-sort="1783117040157" data-listing-reading-time-sort="4" data-listing-word-count-sort="798" data-listing-order-sort="10" data-listing-title-sort="Homework 10 — ANCOVA" data-listing-filename-sort="ancova_homework.qmd">
+<td>
+<span class="listing-order">10</span>
+</td>
+<td>
+<span class="listing-week">8</span>
+</td>
+<td>
+<a href="../homeworks/08_10_ancova_homework/ancova_homework.html" class="title listing-title">Homework 10 — ANCOVA</a>
+</td>
+<td>
+<span class="listing-description">Analysis of covariance.</span>
+</td>
+
+</tr>
+
+</tbody>
+</table>
 <div class="listing-no-matching d-none">No matching items</div>
 </div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">

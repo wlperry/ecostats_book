@@ -1,15 +1,34 @@
 ---
 title: "Activities"
+author: "Bill Perry"
 title-block-banner: true
 page-layout: full
+
+format:
+  html:
+    toc: false
+    downloads: []
+    embed-resources: false
+    self-contained: false
+
 listing:
-  contents: 
-    - "lecture_*/*.qmd"
-  type: grid
-  sort: "title asc"
-  categories: true
+  contents: "*_activity/*.qmd"   # matches WW_MM_<slug>_activity folders
+  type: table
+  sort: "order asc"              # sorts by the `order:` field in each qmd, not by title
   sort-ui: false
   filter-ui: true
+  categories: false              # no clickable filter chips (matches data science site)
+  fields: [order, week, title, description]
+  field-display-names:
+    order: "Activity #"
+    week: "Week"
+    title: "Activity"
+    description: "Description"
+  field-types:
+    order: number
 ---
 
-These are the hands-on activities and lab materials for the course. Click a card to view the instructions and datasets.
+Every activity below pulls its number, week, title, and description straight from
+that file's YAML frontmatter — nothing on this page is hand-typed. Ordering comes
+from the `order:` field, which the `sync_order_from_folder_names.R` pre-render hook
+fills in automatically from each folder's `WW_MM_` number prefix.

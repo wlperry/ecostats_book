@@ -12,13 +12,13 @@ I am currently working on updating the lectures and intro specificall so we have
 ::: {layout-ncol=2}
 #### 01 - Introduction - Start with R
 * [🖥️ Lecture](lectures/01_01_intro_start_with_r/intro_start_with_r.qmd)
-* [📋 Activity](activities/lecture_01/01_class_activity.qmd)
-* [💻 Homework](homeworks/hw_1_r/01_homework_intro.qmd)
-* [📖 Vignette: T-Tests (Parametric)](vignettes/01_t_tests_parametric/01_two_sample_ttest.qmd)
+* [📋 Activity](activities/01_01_intro_start_with_r_activity/intro_start_with_r_activity.qmd)
+* [💻 Homework](homeworks/01_01_intro_r_homework/intro_r_homework.qmd)
+* [📖 Vignette: T-Tests (Parametric)](vignettes/01_01_two_sample_ttest_vignette/two_sample_ttest.qmd)
 
 #### 02 - Project Design and Graphing data
 * [🖥️ Lecture](lectures/01_02_project_design_graphing/project_design_graphing.qmd)
-* [📋 Activity](activities/lecture_02/02_class_activity.qmd)
+* [📋 Activity](activities/01_02_project_design_graphing_activity/project_design_graphing_activity.qmd)
 :::
 
 ---
@@ -27,13 +27,13 @@ I am currently working on updating the lectures and intro specificall so we have
 ::: {layout-ncol=2}
 #### 03 - Descriptive Stats and Wrangling
 * [🖥️ Lecture](lectures/02_03_descriptive_stats_wrangling/descriptive_stats_wrangling.qmd)
-* [📋 Activity](activities/lecture_03/03_class_activity.qmd)
-* [💻 Homework](homeworks/hw_2_desc_stats/02_homework_stats.qmd)
-* [📖 Vignette: T-Tests (Non-Parametric)](vignettes/02_t_tests_nonparametric/02_two_sample_welches_ttest.qmd)
+* [📋 Activity](activities/02_03_descriptive_stats_wrangling_activity/descriptive_stats_wrangling_activity.qmd)
+* [💻 Homework](homeworks/02_02_descriptive_stats_homework/descriptive_stats_homework.qmd)
+* [📖 Vignette: T-Tests (Non-Parametric)](vignettes/02_02_welch_ttest_vignette/welch_ttest.qmd)
 
 #### 04 - Probability and Inference I
 * [🖥️ Lecture](lectures/02_04_probability_inference/probability_inference.qmd)
-* [📋 Activity](activities/lecture_04/04_class_activity.qmd)
+* [📋 Activity](activities/02_04_probability_inference_activity/probability_inference_activity.qmd)
 :::
 
 ---
@@ -42,13 +42,13 @@ I am currently working on updating the lectures and intro specificall so we have
 ::: {layout-ncol=2}
 #### 05 - T-Tests - one - two - paired
 * [🖥️ Lecture](lectures/03_05_t_tests/t_tests.qmd)
-* [📋 Activity](activities/lecture_05/05_class_activity.qmd)
-* [💻 Homework](homeworks/hw_3_ttest/03_homework_t_test.qmd)
-* [📖 Vignette: Correlation](vignettes/03_correlation/04_correlation_analysis.qmd)
+* [📋 Activity](activities/03_05_t_tests_activity/t_tests_activity.qmd)
+* [💻 Homework](homeworks/03_03_t_test_homework/t_test_homework.qmd)
+* [📖 Vignette: Correlation](vignettes/03_03_correlation_vignette/correlation.qmd)
 
 #### 06 - Power and Type I and II error
 * [🖥️ Lecture](lectures/03_06_power_and_error/power_and_error.qmd)
-* [📋 Activity](activities/lecture_06/06_class_activity.qmd)
+* [📋 Activity](activities/03_06_power_and_error_activity/power_and_error_activity.qmd)
 :::
 
 ---
@@ -57,13 +57,13 @@ I am currently working on updating the lectures and intro specificall so we have
 ::: {layout-ncol=2}
 #### 07 - Non Parametric T-Tests
 * [🖥️ Lecture](lectures/04_07_nonparametric_t_tests/nonparametric_t_tests.qmd)
-* [📋 Activity](activities/lecture_07/07_class_activity.qmd)
-* [💻 Homework](homeworks/hw_4_nonpar/04_homework_nonparametric.qmd)
-* [📖 Vignette: Regression](vignettes/04_regession/05_linear_regression.qmd)
+* [📋 Activity](activities/04_07_nonparametric_t_tests_activity/nonparametric_t_tests_activity.qmd)
+* [💻 Homework](homeworks/04_04_nonparametric_homework/nonparametric_homework.qmd)
+* [📖 Vignette: Regression](vignettes/04_04_linear_regression_vignette/linear_regression.qmd)
 
 #### 08 - Study Design and Sampling
 * [🖥️ Lecture](lectures/04_08_study_design_sampling/study_design_sampling.qmd)
-* [📋 Activity](activities/lecture_08/08_class_activity.qmd)
+* [📋 Activity](activities/04_08_study_design_sampling_activity/study_design_sampling_activity.qmd)
 :::
 
 ---
@@ -72,9 +72,9 @@ I am currently working on updating the lectures and intro specificall so we have
 ::: {layout-ncol=1}
 #### 09 - Correlation vs Linear Models
 * [🖥️ Lecture](lectures/05_09_correlation_linear_models/correlation_linear_models.qmd)
-* [📋 Activity](activities/lecture_09/09_class_activity.qmd)
-* [💻 Homework](homeworks/hw_5_corr_reg/05_homework_correlation_regression.qmd)
-* [📖 Vignette: Multiple Linear Regression](vignettes/05_multiple_linear_regression/07_multiple_linear_regression.qmd)
+* [📋 Activity](activities/05_09_correlation_linear_models_activity/correlation_linear_models_activity.qmd)
+* [💻 Homework](homeworks/05_05_correlation_regression_homework/correlation_regression_homework.qmd)
+* [📖 Vignette: Multiple Linear Regression](vignettes/05_05_multiple_linear_regression_vignette/multiple_linear_regression.qmd)
 :::
 
 ---
@@ -83,14 +83,14 @@ I am currently working on updating the lectures and intro specificall so we have
 ::: {layout-ncol=2}
 #### 10 - Multiple Regression
 * [🖥️ Lecture](lectures/06_10_multiple_regression/multiple_regression.qmd)
-* [📋 Activity](activities/lecture_10/10_class_activity.qmd)
-* [💻 Homework](homeworks/hw_6_mult_reg/06_homework_multiple_regression.qmd)
-* [📖 Vignette: One-way ANOVA](vignettes/06_oneway_anova/08_one_way_ANOVA.qmd)
+* [📋 Activity](activities/06_10_multiple_regression_activity/multiple_regression_activity.qmd)
+* [💻 Homework](homeworks/06_06_multiple_regression_homework/multiple_regression_homework.qmd)
+* [📖 Vignette: One-way ANOVA](vignettes/06_06_one_way_anova_vignette/one_way_anova.qmd)
 
 #### 11 - Analysis of Variance
 * [🖥️ Lecture](lectures/06_11_analysis_of_variance/analysis_of_variance.qmd)
-* [📋 Activity](activities/lecture_11/11_class_activity.qmd)
-* [💻 Homework](homeworks/hw_7_one_way_anova/07_homework_one_way_anova.qmd)
+* [📋 Activity](activities/06_11_analysis_of_variance_activity/analysis_of_variance_activity.qmd)
+* [💻 Homework](homeworks/06_07_one_way_anova_homework/one_way_anova_homework.qmd)
 :::
 
 ---
@@ -99,14 +99,14 @@ I am currently working on updating the lectures and intro specificall so we have
 ::: {layout-ncol=2}
 #### 12 - 2 way ANOVA
 * [🖥️ Lecture](lectures/07_12_two_way_anova/two_way_anova.qmd)
-* [📋 Activity](activities/lecture_12/12_class_activity.qmd)
-* [💻 Homework](homeworks/hw_8_factorial_anova/08_homework_factorial_anova.qmd)
+* [📋 Activity](activities/07_12_two_way_anova_activity/two_way_anova_activity.qmd)
+* [💻 Homework](homeworks/07_08_factorial_anova_homework/factorial_anova_homework.qmd)
 * 📖 Vignette: Two-factor ANOVA *(Coming Soon)*
 
 #### 13 - Nested ANOVAs
 * [🖥️ Lecture](lectures/07_13_nested_anova/nested_anova.qmd)
-* [📋 Activity](activities/lecture_13/13_class_activity.qmd)
-* [💻 Homework](homeworks/hw_9_lmm/09_homework_lmm.qmd)
+* [📋 Activity](activities/07_13_nested_anova_activity/nested_anova_activity.qmd)
+* [💻 Homework](homeworks/07_09_lmm_homework/lmm_homework.qmd)
 * 📖 Vignette: Linear Mixed Models *(Coming Soon)*
 :::
 
@@ -116,13 +116,13 @@ I am currently working on updating the lectures and intro specificall so we have
 ::: {layout-ncol=2}
 #### 14 - GLM and Logistic Regression
 * [🖥️ Lecture](lectures/08_14_glm_logistic_regression/glm_logistic_regression.qmd)
-* [📋 Activity](activities/lecture_14/14_class_activity.qmd)
+* [📋 Activity](activities/08_14_glm_logistic_regression_activity/glm_logistic_regression_activity.qmd)
 * 📖 Vignette: PCA *(Coming Soon)*
 
 #### 15 - ANCOVA - Analysis of Covariance
 * [🖥️ Lecture](lectures/08_15_ancova/ancova.qmd)
-* [📋 Activity](activities/lecture_15/15_class_activity.qmd)
-* [💻 Homework](homeworks/hw_10_ancova/10_homework_ancova.qmd)
+* [📋 Activity](activities/08_15_ancova_activity/ancova_activity.qmd)
+* [💻 Homework](homeworks/08_10_ancova_homework/ancova_homework.qmd)
 :::
 
 ---
@@ -131,12 +131,12 @@ I am currently working on updating the lectures and intro specificall so we have
 ::: {layout-ncol=2}
 #### 16 - Multivariate Statistics
 * [🖥️ Lecture](lectures/09_16_multivariate_statistics/multivariate_statistics.qmd)
-* [📋 Activity](activities/lecture_16/16_class_activity.qmd)
+* [📋 Activity](activities/09_16_multivariate_statistics_activity/multivariate_statistics_activity.qmd)
 * 📖 Vignette: NMDS *(Coming Soon)*
 
 #### 17 - Principal Component Analysis
 * [🖥️ Lecture](lectures/09_17_pca/pca.qmd)
-* [📋 Activity](activities/lecture_17/17_class_activity.qmd)
+* [📋 Activity](activities/09_17_pca_activity/pca_activity.qmd)
 :::
 
 ---
@@ -145,7 +145,7 @@ I am currently working on updating the lectures and intro specificall so we have
 ::: {layout-ncol=2}
 #### 18 - NMDS - Cluster Analysis
 * [🖥️ Lecture](lectures/10_18_nmds_cluster_analysis/nmds_cluster_analysis.qmd)
-* [📋 Activity](activities/lecture_18/18_class_activity.qmd)
+* [📋 Activity](activities/10_18_nmds_cluster_analysis_activity/nmds_cluster_analysis_activity.qmd)
 
 #### 19 - Review
 * [🖥️ Lecture](lectures/10_19_review/review.qmd)

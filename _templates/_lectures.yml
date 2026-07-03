@@ -27,5 +27,5 @@ format:
     fig-dpi: 300        
   html:
     css: /css/main.css
-    downloads: [docx, pptx, typst]
+    downloads: [docx, pptx]
     max-width: 80ch

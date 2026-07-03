@@ -13,7 +13,7 @@ knitr:
     collapse: true
 format:
   html:
-    downloads: [docx, pptx, typst]  # This creates download links for all three
+    downloads: [docx, pptx]  # This creates download links for all three
   revealjs:
     output-ext: "slides.html"
   docx: default

@@ -28,13 +28,4 @@ format:
     highlight-style: github
     reference-doc: ../../ms_templates/custom-reference.docx
     embed-resources: true
-  typst:
-    margin: 
-      x: 0.75in
-      y: 0.5in
-    fig-width: 3
-    fig-height: 3
-    fig-dpi: 300
-    number-sections: false
-    toc: false
 editor: visual

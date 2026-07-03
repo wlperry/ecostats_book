@@ -196,7 +196,7 @@ world by:
 :::
 
 ::: {.column width="40%"}
-```{r}
+```{r l03-01}
 #| echo: false
 #| message: false
 #| warning: false
@@ -292,7 +292,7 @@ error
 Let's recreate the basic histogram of fish lengths using
 `gray_I3_I8.csv`
 
-```{r}
+```{r l03-02}
 # Write your code here to read in the file
 # How do you examine the data - what are the ways you think and lets try it!
 
@@ -308,7 +308,7 @@ Let's recreate the basic histogram of fish lengths using
 
 Let's examine the different data and determine what they are?
 
-```{r}
+```{r l03-03}
 #| paged-print: false
 # Write your code here to read in the file
 # How do you examine the data - what are the ways you think and lets try it!
@@ -474,7 +474,7 @@ so there is only 2.5% of the data that is outside this range
 -   note the similarity to the p \< 0.5
 -   note that it is 90.91% and that is because the curve is not normal
 
-```{r sd-variance-2 a}
+```{r sd-variance-2a}
 #| echo: false
  # Read the data
 fish_data <- read.csv("data/gray_I3_I8.csv")
@@ -1051,7 +1051,7 @@ length. But that's usually impossible in ecology!
 Let's take several random samples from Lake I3 and see how the sample
 means vary:
 
-```{r}
+```{r l03-04}
 # Filter for Lake I3
 i3_data <- grayling_df %>% filter(lake == "I3")
 # Function to take a random sample and calculate the mean
@@ -1073,7 +1073,7 @@ samples_df <- data.frame(
 
 # **Plotting Sample Variation**
 
-```{r}
+```{r l03-05}
 #| echo: false
 #| message: false
 #| warning: false
@@ -1174,7 +1174,7 @@ Let's simulate the sampling distribution for Lake I3 fish data.
 Let's simulate taking many samples from Lake I3 to visualize the
 sampling distribution:
 
-```{r}
+```{r l03-06}
 #| fig-width: 7
 #| fig-height: 5
 # Filter for Lake I3
@@ -1219,7 +1219,7 @@ Notice that the simulated sampling distribution:
 
 Let's see how the standard error changes with different sample sizes:
 
-```{r}
+```{r l03-07}
 #| echo: false
 #| message: false
 #| warning: false
@@ -1252,7 +1252,7 @@ for (size in sample_sizes) {
 
 # **Sample Size vs. Standard Error**
 
-```{r}
+```{r l03-08}
 #| fig-width: 7
 #| fig-height: 5
 # Display the results
@@ -1298,7 +1298,7 @@ estimates.
 Let's calculate and visualize the 95% confidence intervals for the mean
 fish length in each lake:
 
-```{r}
+```{r l03-09}
 #| message: false
 #| warning: false
 #| paged-print: false
@@ -1320,7 +1320,7 @@ grayling_ci
 
 # **Visualizing Confidence Intervals**
 
-```{r}
+```{r l03-10}
 #| message: false
 #| warning: false
 #| paged-print: false
@@ -1343,7 +1343,7 @@ ggplot(grayling_ci, aes(x = lake, y = mean_length, fill = lake)) +
 
 Let's compare different ways of displaying uncertainty in our estimates:
 
-```{r}
+```{r l03-11}
 #| code-overflow: wrap
 #| code-fold: false
 #| code-block-height: 800px
@@ -1370,7 +1370,7 @@ error_types <- data.frame(
 
 # **Comparing Error Bar Types**
 
-```{r}
+```{r l03-12}
 #| fig-width: 7
 #| fig-height: 5
 # Plot the comparison

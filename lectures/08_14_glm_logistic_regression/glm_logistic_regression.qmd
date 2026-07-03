@@ -152,7 +152,7 @@ p3 <- ggplot(data.frame(x = 0:10, y = binomial_data),
 
 ::::: columns
 ::: {.column width="50%"}
-```{r}
+```{r l14-01}
 # Simulate data that students might log-transform
 set.seed(123)
 treatment_data <- data.frame(
@@ -173,7 +173,7 @@ model_glm <- glm(biomass ~ treatment,
 ::: {.column width="50%"}
 Here is the difference
 
-```{r}
+```{r l14-02}
 # Compare predictions on original scale
 cat("logged response variable\n\n")
 emmeans(model_log, ~treatment, type = "response")  # Geometric means
@@ -341,7 +341,7 @@ regression.
 ::: {.column .scrollable width="50%"}
 -   Let's look at the summary of our Gaussian GLM:
 
-```{r}
+```{r l14-03}
 #| include: false
 # Fit a standard linear model
 model_lm <- lm(Endemics ~ size_category, data = gala)
@@ -518,7 +518,7 @@ is why a Poisson model works**]{.underline}
 :::
 
 ::: {.column width="50%"}
-```{r}
+```{r l14-04}
 #| echo: true
 #| message: false
 #| warning: false
@@ -552,7 +552,7 @@ effect on the number of plant species?
 ::: {.column width="50%"}
 Test overall effect of size_category
 
-```{r}
+```{r l14-05}
 #| echo: true
 #| message: false
 #| warning: false
@@ -884,7 +884,7 @@ lizards (*Uta*) on islands in Gulf of California based on perimeter/area
 ratio.
 
 ::: {.panel column="screen"}
-```{r}
+```{r l14-06}
 # Fit the logistic regression model
 lizard_model <- glm(uta_present ~ pa_ratio, 
                     data = island_data, 

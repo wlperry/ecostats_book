@@ -185,7 +185,7 @@ What if response continuous and predictor(s) categorical?
 :::
 
 ::: {.column width="40%"}
-```{r}
+```{r l11-01}
 #| echo: false
 #| message: false
 #| warning: false
@@ -279,7 +279,7 @@ ggplot(anova_data, aes(x = group, y = value, color = group)) +
 :::
 
 ::: {.column width="40%"}
-```{r, echo=FALSE}
+```{r l11-02, echo=FALSE}
 # Display the circadian rhythm plot
 circadian_anova_plot
 ```
@@ -309,7 +309,7 @@ Rejecting H₀ in ANOVA
 :::
 
 ::: {.column width="40%"}
-```{r, echo=FALSE}
+```{r l11-03, echo=FALSE}
 # Display the circadian rhythm plot
 circadian_anova_plot
 ```
@@ -344,7 +344,7 @@ $$F = \frac{MS_{groups}}{MS_{error}}$$
 :::
 
 ::: {.column width="40%"}
-```{r}
+```{r l11-04}
 #| echo: false
 #| message: false
 #| warning: false
@@ -457,7 +457,7 @@ These components are additive: $SS_{total} = SS_{among} + SS_{within}$
 :::
 
 ::: {.column width="40%"}
-```{r}
+```{r l11-05}
 #| echo: false
 #| message: false
 #| warning: false
@@ -471,7 +471,7 @@ anova_visualization_plot
 
 :::::: columns
 ::: {.column width="60%"}
-```{r}
+```{r l11-06}
 #| echo: false
 #| paged-print: false
 # Using the pre-fitted model from setup
@@ -525,7 +525,7 @@ group:
 :::
 
 ::: {.column width="40%"}
-```{r}
+```{r l11-07}
 #| echo: false
 #| message: false
 #| warning: false
@@ -589,7 +589,7 @@ Is equivalent to an ANOVA table from a regression model:
     -   We reject the null hypothesis\
     -   F-ratio follows F-distribution with (a - 1) and (a(n - 1)) df
 
-```{r}
+```{r l11-08}
 #| echo: false
 # Show our observed F value in comparison to critical value
 f_observed <- anova_result$`F value`[1]
@@ -697,7 +697,7 @@ ggplot(f_data, aes(x = x, y = y)) +
 
 Let's verify this relationship with a simple example in R:
 
-```{r}
+```{r l11-09}
 #| echo: false
 #| message: false
 #| warning: false
@@ -730,7 +730,7 @@ chance - With the circadian rhythm data: F~2,19~ = 7.29, p = 0.004\
 - We reject the null hypothesis\
 - F-ratio follows an F-distribution with (a - 1) and (a(n - 1)) df
 
-```{r}
+```{r l11-10}
 #| echo: false
 #| message: false
 #| warning: false
@@ -742,7 +742,7 @@ Anova(circ_model)
 :::
 
 ::: {.column width="40%"}
-```{r}
+```{r l11-11}
 #| echo: false
 #| message: false
 #| warning: false
@@ -775,7 +775,7 @@ $$R^2 = \frac{SS_{regression}}{SS_{total}}$$
 :::
 
 ::: {.column width="40%"}
-```{r}
+```{r l11-12}
 #| echo: false
 #| message: false
 #| warning: false
@@ -896,7 +896,7 @@ p4 <- ggplot(model_data, aes(x = .hat, y = .stdresid)) +
 print((p1 | p2) / (p3 | p4))
 ```
 
-```{r}
+```{r l11-13}
 #| message: false
 #| warning: false
 #| paged-print: false
@@ -905,7 +905,7 @@ print((p1 | p2) / (p3 | p4))
 
 # A newer way to check with the performance library
 
-```{r}
+```{r l11-14}
 #| echo: false
 #| message: false
 #| warning: false
@@ -931,7 +931,7 @@ Levene's test of homogeneity of variance
 -   Null Hypothesis is that they are homogeneous
 -   So you want a non significant result here
 
-```{r}
+```{r l11-15}
 #| echo: false
 #| message: false
 #| warning: false
@@ -947,7 +947,7 @@ levene_test
 Shapiro-Wilk Normality Test Null Hypothesis is that they are normally
 distributed So you want a non significant result here
 
-```{r}
+```{r l11-16}
 #| echo: false
 #| message: false
 #| warning: false
@@ -991,7 +991,7 @@ When ANOVA rejects H₀, we need to determine which groups differ
 :::
 
 ::: {.column width="50%"}
-```{r}
+```{r l11-17}
 #| echo: false
 #| message: false
 #| warning: false
@@ -1032,7 +1032,7 @@ When ANOVA rejects H₀, we need to determine which groups differ
 :::
 
 ::: {.column width="50%"}
-```{r}
+```{r l11-18}
 #| echo: false
 #| message: false
 #| warning: false
@@ -1087,7 +1087,7 @@ tests = better error control but less power.
 :::
 
 ::: {.column width="40%"}
-```{r}
+```{r l11-19}
 # ============================================
 # TUKEY-KRAMER (HSD)
 # ============================================
@@ -1191,7 +1191,7 @@ When ANOVA rejects H₀, we need to determine which groups differ.
 :::
 
 ::: {.column width="50%"}
-```{r}
+```{r l11-20}
 #| echo: false
 #| message: false
 #| warning: false
@@ -1227,7 +1227,7 @@ When ANOVA rejects H₀, we need to determine which groups differ.
 :::
 
 ::: {.column width="40%"}
-```{r, echo=FALSE}
+```{r l11-21, echo=FALSE}
 # Create a plot with letters indicating significant differences
 ggplot(circ_data, aes(x = treatment, y = phase_shift, color = treatment)) +
   geom_jitter(width = 0.2, alpha = 0.7) +

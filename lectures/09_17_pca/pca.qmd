@@ -157,7 +157,7 @@ Right is the data on iris from a long dataframe
 :::
 
 ::: {.column width="40%"}
-```{r}
+```{r l17-01}
 overview_plot <- iris_long_df %>% 
   ggplot(aes(species, values, color=species)) + 
   geom_boxplot() +

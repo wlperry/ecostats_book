@@ -36,7 +36,7 @@ execute:
   freeze: auto
   cache: true
   echo: true
-  keep-md: true # retains the images when you start again
+  keep-md: false # retains the images when you start again
   fig-width: 3
   fig-height: 4
 format:

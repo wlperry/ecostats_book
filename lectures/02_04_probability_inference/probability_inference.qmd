@@ -17,7 +17,7 @@ format:
   pptx: default
 ---
 
-```{r}
+```{r l04-01}
 #| message: false
 #| warning: false
 #| include: false
@@ -46,7 +46,7 @@ i3_df <- grayling_df %>% filter(lake =="I3")
 :::
 
 ::: {.column width="40%"}
-```{r}
+```{r l04-02}
 #| echo: false
 #| message: false
 #| warning: false
@@ -70,7 +70,7 @@ grayling_i3i8_plot
 Let's explore the Arctic grayling data from lakes I3 and I8. Use the
 `grayling_df` data frame to create basic summary statistics.
 
-```{r}
+```{r l04-03}
 # Write your code here to explore the basic structure of the data
 # also note plottig a box plot is really useful
 
@@ -105,7 +105,7 @@ grayling_summary
 :::
 
 ::: {.column width="40%"}
-```{r}
+```{r l04-04}
 #| echo: false
 #| message: false
 #| warning: false
@@ -137,7 +137,7 @@ Z-scores allow us to convert any **normal distribution** to the
 :::
 
 ::: {.column width="40%"}
-```{r}
+```{r l04-05}
 #| echo: false
 #| message: false
 #| warning: false
@@ -175,7 +175,7 @@ grayling data.
 
 **Z Score = (length - mean) / standard deviation**
 
-```{r}
+```{r l04-06}
 #| echo: true
 # Calculate the mean and standard deviation of fish lengths
 mean_length <- mean(i3_df$length_mm, na.rm = TRUE)
@@ -201,7 +201,7 @@ distributon?
 :::
 
 ::: {.column width="40%"}
-```{r}
+```{r l04-07}
 #| echo: false
 #| message: false
 #| warning: false
@@ -232,7 +232,7 @@ should be **approximately (varies if distribution is not normal)**:
 -   **95% of data within ±2σ of the mean - really 1.96σ**
 -   99.7% of data within ±3σ of the mean
 
-```{r}
+```{r l04-08}
 # What proportion of fish are within 1 standard deviation of the mean?
 within_1sd <- sum(abs(i3_df$z_score) <= 1, na.rm = TRUE) / sum(!is.na(i3_df$z_score))
 cat("Proportion within 1 SD:", round(within_1sd * 100, 1), "%\n")
@@ -253,7 +253,7 @@ You want to know things about this population like
 :::
 
 ::: {.column width="40%"}
-```{r}
+```{r l04-09}
 #| echo: false
 #| message: false
 #| warning: false
@@ -295,7 +295,7 @@ Standard Normal Distribution
 :::
 
 ::: {.column width="40%"}
-```{r}
+```{r l04-10}
 #| echo: false
 #| message: false
 #| warning: false
@@ -356,7 +356,7 @@ Areas under curve of Standard Normal Distribution
 :::
 
 ::: {.column width="40%"}
-```{r}
+```{r l04-11}
 #| echo: false
 #| message: false
 #| warning: false
@@ -390,7 +390,7 @@ z = (300 - 265.61)/28.3 = 1.215194
 :::
 
 ::: {.column width="40%"}
-```{r}
+```{r l04-12}
 #| echo: false
 #| message: false
 #| warning: false
@@ -554,7 +554,7 @@ Previously we had calculated Standard Error and Confidence Intervals -
 :::
 
 ::: {.column width="40%"}
-```{r}
+```{r l04-13}
 #| echo: false
 #| message: false
 #| warning: false
@@ -715,7 +715,7 @@ versus the t-distribution for our fish data. I3 data and 10 fish Mean is
 
 \## $\text{CI} = \bar{y} \pm t \cdot \frac{s}{\sqrt{n}}$
 
-```{r}
+```{r l04-14}
 #| message: false
 #| warning: false
 #| include: false
@@ -742,7 +742,7 @@ versus the t-distribution for our fish data. I3 data and 10 fish Mean is
 
 \## $\text{CI} = \bar{y} \pm t \cdot \frac{s}{\sqrt{n}}$
 
-```{r}
+```{r l04-15}
 # Display results
 cat("Mean:", round(sample_mean, 1), "mm\n")
 cat("Standard deviation:", round(sample_sd, 2), "mm\n")
@@ -783,7 +783,7 @@ only interested if it is larger
 :::
 
 ::: {.column width="40%"}
-```{r}
+```{r l04-16}
 #| echo: false
 #| message: false
 #| warning: false
@@ -916,7 +916,7 @@ only interested if it is larger
 :::
 
 ::: {.column width="40%"}
-```{r}
+```{r l04-17}
 #| echo: false
 #| message: false
 #| warning: false
@@ -1046,7 +1046,7 @@ we are looking at the confidence intervals!!!\
 :::
 
 ::: {.column width="40%"}
-```{r}
+```{r l04-18}
 #| echo: false
 #| message: false
 #| warning: false
@@ -1175,7 +1175,7 @@ we are looking at the confidence intervals!!!
 :::
 
 ::: {.column width="40%"}
-```{r}
+```{r l04-19}
 #| echo: false
 #| message: false
 #| warning: false
@@ -1287,7 +1287,7 @@ print(measurement_plot)
 Let's perform a one-sample t-test to determine if the mean fish length
 in Lake I3 differs from 260 mm:
 
-```{r}
+```{r l04-20}
 # get only lake I3
 i3_df <- grayling_df %>% filter(lake=="I3")
 
@@ -1322,7 +1322,7 @@ null and alternative hypotheses:
 
 1.  Are fish in Lake I8 longer than fish in Lake I3?
 
-```{r}
+```{r l04-21}
 # Let's test one of these hypotheses: Are fish in Lake I8 longer than fish in Lake I3?
 
 # Perform an independent t-test
@@ -1360,7 +1360,7 @@ something more extreme) if the null hypothesis is true.
 :::
 
 ::: {.column width="40%"}
-```{r}
+```{r l04-22}
 #| echo: false
 #| message: false
 #| warning: false
@@ -1433,7 +1433,7 @@ occur:
 :::
 
 ::: {.column width="40%"}
-```{r}
+```{r l04-23}
 #| echo: false
 #| message: false
 #| warning: false
@@ -1523,7 +1523,7 @@ The Key Insight fundamental trade-off in hypothesis testing:
 :::
 
 ::: {.column width="40%"}
-```{r}
+```{r l04-24}
 #| echo: false
 #| message: false
 #| warning: false
@@ -1555,7 +1555,7 @@ error might have occurred:
 3.  Let's calculate the power of our t-test to detect a 30 mm difference
     in length between lakes:
 
-```{r}
+```{r l04-25}
 # Calculate power for detecting a 30 mm difference
 # First determine parameters
 lake_I3 <- grayling_df %>% filter(lake == "I3")
@@ -1605,7 +1605,7 @@ power
 :::
 
 ::: {.column width="40%"}
-```{r}
+```{r l04-26}
 #| echo: false
 #| message: false
 #| warning: false

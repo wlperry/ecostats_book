@@ -56,7 +56,7 @@ options(contrasts = c("contr.sum", "contr.poly")) # for true type 3 anovas
 :::
 
 ::: {.column width="40%"}
-```{r}
+```{r l15-01}
 # Placeholder for review image
 ```
 :::
@@ -106,7 +106,7 @@ options(contrasts = c("contr.sum", "contr.poly")) # for true type 3 anovas
 :::
 
 ::: {.column width="40%"}
-```{r}
+```{r l15-02}
 #| echo: false
 #| message: false
 #| warning: false
@@ -179,7 +179,7 @@ ggplot(data, aes(x = x, y = y, color = group)) +
 :::
 
 ::: {.column width="40%"}
-```{r}
+```{r l15-03}
 #| echo: false
 #| message: false
 #| warning: false
@@ -227,7 +227,7 @@ ggplot(cricket_data, aes(x = temp, y = chirp_rate, color = species)) +
 # ANCOVA Model Visualization
 
 ::: {.panel column="screen"}
-```{r}
+```{r l15-04}
 #| echo: false
 #| message: false
 #| warning: false
@@ -353,7 +353,7 @@ ggplot() +
 :::
 
 ::: {.column width="40%"}
-```{r}
+```{r l15-05}
 #| echo: false
 #| message: false
 #| warning: false
@@ -473,7 +473,7 @@ ggplot(param_data, aes(x = x, y = y, color = group)) +
 # Analysis of Variance for ANCOVA: Partitioning
 
 ::: {.panel column="screen"}
-```{r}
+```{r l15-06}
 #| echo: false
 #| message: false
 #| warning: false
@@ -562,7 +562,7 @@ partitioning_plot1 + partitioning_plot2 + plot_layout(ncol = 1, heights = c(1, 2
 The ANOVA table for a single-factor ANCOVA has these components:
 
 ::: {.panel column="screen"}
-```{r}
+```{r l15-07}
 # Create a tibble with ANOVA table information
 anova_table <- tibble(
   Source = c("Factor A (adjusted)", "Covariate", "Residual", "Total"),
@@ -612,7 +612,7 @@ Test with F = MS_Covariate/MS_Residual (the 'x' term in
 **Parallel vs. Non-Parallel Slopes**
 
 ::: {.panel column="screen"}
-```{r}
+```{r l15-08}
 #| echo: false
 #| message: false
 #| warning: false
@@ -691,7 +691,7 @@ ggplot(all_data, aes(x = x, y = y, color = group)) +
 **ANCOVA on Longevity of Male Fruitflies**
 
 ::: {.panel column="screen"}
-```{r}
+```{r l15-09}
 #| echo: false
 #| paged-print: false
 # We've already loaded this, but good practice
@@ -729,7 +729,7 @@ ggplot(partridge, aes(x = THORAX, y = LONGEV, color = treatment)) +
     -   We can proceed to Step 3 and fit the simpler additive model.
 
 ::: {.panel column="screen"}
-```{r}
+```{r l15-10}
 # Step 1: Fit model with interaction term
 homo_slopes_model <- lm(LONGEV ~ THORAX * treatment, data = partridge)
 # Step 2: Test significance of interaction using Type III SS
@@ -751,7 +751,7 @@ p_interaction <- Anova(homo_slopes_model, type = "III")["THORAX:treatment", "Pr(
             length, is highly significant
 
 ::: {.panel column="screen"}
-```{r}
+```{r l15-11}
 #| paged-print: false
 # Step 3: Fit the ANCOVA model (additive model)
 ancova_model <- lm(LONGEV ~ THORAX + treatment, data = partridge)
@@ -775,7 +775,7 @@ Anova(ancova_model, type = "III")
     -   This is the "level playing field" comparison.
 
 ::: {.panel column="screen"}
-```{r}
+```{r l15-12}
 # Get adjusted means using emmeans
 library(emmeans)
 adjusted_means <- emmeans(ancova_model, "treatment")
@@ -799,7 +799,7 @@ adjusted_means
             significant.
 
 ::: {.panel column="screen"}
-```{r}
+```{r l15-13}
 #| message: false
 #| warning: false
 #| paged-print: false
@@ -824,7 +824,7 @@ pairs(adjusted_means, adjust = "tukey")
             significant.
 
 ::: {.panel column="screen"}
-```{r}
+```{r l15-14}
 # Plot adjusted means with confidence intervals
 plot(adjusted_means, comparisons = TRUE) + 
   labs(title = "Adjusted Means by Treatment",
@@ -839,7 +839,7 @@ plot(adjusted_means, comparisons = TRUE) +
 **Visualization Options for ANCOVA**
 
 ::: {.panel column="screen"}
-```{r}
+```{r l15-15}
 #| echo: false
 #| message: false
 #| warning: false
@@ -927,7 +927,7 @@ ancova_vis_plot4 <- ggplot(adj_means_data, aes(x = treatment, y = emmean, fill =
 :::
 
 ::: {.column width="40%"}
-```{r}
+```{r l15-16}
 #| echo: false
 #| message: false
 #| warning: false
@@ -1051,7 +1051,7 @@ If the interaction term is significant (p \< 0.05):
 -   **Conclusion:** The assumptions are met.
 
 ::: {.panel column="screen"}
-```{r}
+```{r l15-17}
 #| echo: false
 #| fig-height: 5
 #| fig-width: 5
@@ -1086,7 +1086,7 @@ plot(ancova_model)
 :::
 
 ::: {.column width="40%"}
-```{r}
+```{r l15-18}
 # Example of rank-transformed ANCOVA
 partridge$rank_LONGEV <- rank(partridge$LONGEV)
 partridge$rank_THORAX <- rank(partridge$THORAX)
@@ -1137,7 +1137,7 @@ Here's how you might write up ANCOVA results for publication:
 ## Publication Quality Figure
 
 ::: {.panel column="screen"}
-```{r}
+```{r l15-19}
 #| echo: false
 #| message: false
 #| warning: false

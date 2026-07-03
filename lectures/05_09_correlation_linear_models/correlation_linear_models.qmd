@@ -142,7 +142,7 @@ we'll explore:
 :::
 
 ::: {.column width="40%"}
-```{r}
+```{r l09-01}
 #| echo: false
 #| message: false
 #| warning: false

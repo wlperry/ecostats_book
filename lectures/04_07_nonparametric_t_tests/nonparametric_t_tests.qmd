@@ -66,7 +66,7 @@ lake trout
 
 # Setting Up Our Analysis
 
-```{r}
+```{r l07-01}
 # Install packages if needed (uncomment if necessary)
 # install.packages("readr")
 # install.packages("tidyverse")
@@ -97,7 +97,7 @@ head(lt_df)
 
 ```
 
-```{r}
+```{r l07-02}
 # I had accdentally asked you to do mode in HW2 - wiht out telling you how... 
 # here is one approach
 lt_df %>%
@@ -194,7 +194,7 @@ Basic assumptions of parametric t-tests:
 :::
 
 ::: {.column width="40%"}
-```{r}
+```{r l07-03}
 #| echo: false
 #| message: false
 #| warning: false
@@ -287,7 +287,7 @@ Basic assumptions of parametric t-tests:
 :::
 
 ::: {.column width="40%"}
-```{r}
+```{r l07-04}
 #| echo: false
 #| message: false
 #| warning: false
@@ -325,7 +325,7 @@ variability
 :::
 
 ::: {.column width="40%"}
-```{r}
+```{r l07-05}
 #| echo: false
 #| message: false
 #| warning: false
@@ -356,7 +356,7 @@ length_plot + mass_plot + plot_layout(ncol=1)
 :::
 
 ::: {.column width="40%"}
-```{r}
+```{r l07-06}
 #| echo: false
 #| fig-width: 5
 #| fig-height: 4
@@ -382,7 +382,7 @@ ne12_histo_plot + ne12_box_plot + plot_layout(ncol = 1)
 :::
 
 ::: {.column width="40%"}
-```{r}
+```{r l07-07}
 #| echo: false
 
 
@@ -405,7 +405,7 @@ ne12_histo_plot+ne12_box_plot + ne12_qq_plot + plot_layout(ncol=1)
 :::
 
 ::: {.column width="40%"}
-```{r}
+```{r l07-08}
 #| message: false
 #| warning: false
 #| echo: false
@@ -467,7 +467,7 @@ ne12_island_box_plot +ne12_island_qq_plot+plot_layout(guides="collect")
 :::
 
 ::: {.column width="40%"}
-```{r}
+```{r l07-09}
 #| echo: false
 #| message: false
 #| warning: false
@@ -492,7 +492,7 @@ ne12_island_box_plot +log_ne12_island_box_plot +plot_layout(guides="collect")
     -   Welch's T-Test is:
         -   **t.test(y1, y2, var.equal = FALSE, paired = FALSE)**
 
-```{r}
+```{r l07-10}
 #| echo: false
 #| message: false
 #| warning: false
@@ -540,7 +540,7 @@ Rank-based tests: no assumptions about distribution (non-parametric)
 
 # Mann-Whitney U Test Results
 
-```{r}
+```{r l07-11}
 #| echo: false
 
 # Perform Mann-Whitney U test (Wilcoxon rank-sum test)
@@ -571,7 +571,7 @@ wilcox_test_result
 :::
 
 ::: {.column width="40%"}
-```{r}
+```{r l07-12}
 #| echo: false
 #| message: false
 #| warning: false
@@ -605,7 +605,7 @@ ne12_island_box_plot
 -   In R (using 'perm' package):
 -   Assumptions: both groups have similar distribution; equal variance
 
-```{r}
+```{r l07-13}
 library(perm) 
 
 # Prepare data for permutation test

@@ -282,7 +282,7 @@ distance_std <- sqrt(sum((plant1_std - plant2_std)^2))
 
 ```
 
-```{r}
+```{r l16-01}
 #| echo: false
 cat("\nDistance between plants 1 and 2 (standardized):\n",
   round(distance_std, 2), "standard deviations\n\n",
@@ -937,7 +937,7 @@ ggplot(pc_scores, aes(x = PC1, y = PC2, color = site)) +
 # Different visualization of PCA Scores
 
 ::: panel
-```{r}
+```{r l16-02}
 #| echo: false
 #| message: false
 #| warning: false
@@ -1626,7 +1626,7 @@ summary(pca_dg)
 
 # Some other ways
 
-```{r}
+```{r l16-03}
 # Create dataset with row names
 darl_pca_data <- darlingtonia %>% 
   select(height, mouth_diam, tube_diam, keel_diam, 
@@ -1662,7 +1662,7 @@ fviz_pca_ind(pca_facto,
 
 ```
 
-```{r}
+```{r l16-04}
 
 
 # Quick PCA plot with ggplot2
@@ -1675,7 +1675,7 @@ autoplot(pca_result,
          frame.type = 'norm')  # or 't' for confidence
 ```
 
-```{r}
+```{r l16-05}
 # Prepare data matrix (samples × variables)
 darl_matrix <- darlingtonia %>%
   select(height, mouth_diam, tube_diam, keel_diam, 
@@ -1720,7 +1720,7 @@ legend("topright", legend = levels(site_factor),
        col = colors, pch = 19, bty = "n")
 ```
 
-```{r}
+```{r l16-06}
 # Analysis
 pca_vegan <- rda(darl_matrix)
 permanova <- adonis2(darl_matrix ~ site, data = darlingtonia)
@@ -1748,7 +1748,7 @@ permanova_scaled <- adonis2(darl_scaled ~ site,
 permanova_scaled
 ```
 
-```{r}
+```{r l16-07}
 # Ordination plot with convex hulls (simpler)
 ordiplot(pca_vegan, type = "none")
 ordihull(pca_vegan, groups = darlingtonia$site, 
@@ -1759,7 +1759,7 @@ legend("topright", legend = levels(factor(darlingtonia$site)),
        pt.bg = 1:n_sites, pch = 21, bty = "n")
 ```
 
-```{r}
+```{r l16-08}
 # Pairwise comparisons between sites
 pairwise_result <- pairwise.adonis2(darl_scaled ~ site, 
                                     data = darlingtonia,
@@ -1768,7 +1768,7 @@ pairwise_result <- pairwise.adonis2(darl_scaled ~ site,
 pairwise_result
 ```
 
-```{r}
+```{r l16-09}
 # install.packages("RVAideMemoire")
 library(RVAideMemoire)
 

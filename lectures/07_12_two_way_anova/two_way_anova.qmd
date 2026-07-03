@@ -431,7 +431,7 @@ print(comparison %>% select(species, cell_mean_female, cell_mean_male, species_e
 -   Unbalanced data - it is the mean of cells that represent the lowest
     average of the groups
 
-```{r}
+```{r l12-01}
 #| echo: false
 #| message: false
 #| warning: false
@@ -858,7 +858,7 @@ pairs_interaction <- pairs(emm_interaction, adjust = "tukey")
 
 # Interaction tests continued
 
-```{r}
+```{r l12-02}
 #| echo: false
 # Get compact letter display (cld)
 cld_interaction <- multcomp::cld(emm_interaction, 
@@ -1225,7 +1225,7 @@ pairs_interaction_u
 
 # Interaction tests continued
 
-```{r}
+```{r l12-03}
 #| echo: false
 #| message: false
 #| warning: false

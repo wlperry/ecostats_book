@@ -30,6 +30,7 @@ Covered
 -   Paired T Tests
 :::
 
+::: {.column width="40%"}
 ![](images/clipboard-536528302.png){width="259" height="315"}
 :::
 ::::
@@ -233,7 +234,7 @@ something more extreme) if the null hypothesis is true.
 :::
 
 ::: {.column width="40%"}
-```{r}
+```{r l06-01}
 #| echo: false
 #| message: false
 #| warning: false
@@ -465,7 +466,7 @@ is \~ have higher power.
 :::
 
 ::: {.column width="40%"}
-```{r}
+```{r l06-02}
 #| echo: false
 #| message: false
 #| warning: false
@@ -549,7 +550,7 @@ error might have occurred:
         difference of 1 units (g)
     -   `delta = 0.423`: The standardized effect size (Cohen's d)
 
-```{r}
+```{r l06-03}
 library(car)
 library(patchwork)
 library(tidyverse)
@@ -587,7 +588,7 @@ power
 
 # What if we calculated power for the pine needles you measured?
 
-```{r}
+```{r l06-04}
 pine_switch_df <- read_excel("data/class_pine needle length switched.xlsx")
 ps_df <- pine_switch_df %>% 
   group_by(group, tree_no, tree_char, side) %>% 
@@ -677,7 +678,7 @@ When interpreting graphs:
 :::
 
 ::: {.column width="40%"}
-```{r}
+```{r l06-05}
 #| echo: false
 #| message: false
 #| warning: false
@@ -764,7 +765,7 @@ are analyzed as if they were independent.
 :::
 
 ::: {.column width="40%"}
-```{r}
+```{r l06-06}
 #| echo: false
 #| message: false
 #| warning: false

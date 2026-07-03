@@ -2,7 +2,7 @@ execute:
   freeze: auto
   cache: true
   echo: true
-  keep-md: true
+  keep-md: false
   message: true
   warning: true
   fig-height: 5

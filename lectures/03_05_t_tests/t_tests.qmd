@@ -41,7 +41,7 @@ format:
         different?
 -   for Two sample T-tests the df = n1+ n2 -2 = 8+8-2=14
 
-```{r}
+```{r l05-01}
 #| echo: false
 #| message: false
 #| warning: false
@@ -103,7 +103,7 @@ stats_df
 :::
 
 ::: {.column width="40%"}
-```{r}
+```{r l05-02}
 #| echo: false
 #| message: false
 #| warning: false
@@ -136,7 +136,7 @@ The goals for today
 :::
 
 ::: {.column width="40%"}
-```{r}
+```{r l05-03}
 #| echo: false
 #| message: false
 #| warning: false
@@ -254,7 +254,7 @@ qqPlot(ps_df$length_mm,
 
 ### Shapiro-Wilk test
 
-```{r}
+```{r l05-04}
 # Shapiro-Wilk test
 shapiro.test(ps_df$length_mm)
 
@@ -262,7 +262,7 @@ shapiro.test(ps_df$length_mm)
 
 # Checking for Outliers
 
-```{r}
+```{r l05-05}
 # Check for outliers using boxplot
 # YOUR CODE HERE
 # Create a boxplot comparing the two lakes
@@ -284,7 +284,7 @@ shady_sunny_plot
 Let's perform a one-sample t-test to determine if the mean needle length
 on the shady side differs from 15 mm:
 
-```{r}
+```{r l05-06}
 # what is the mean
 ps_shade_mean <- mean(ps_shady_df$length_mm, na.rm = TRUE)
 cat("Mean:", round(ps_shade_mean, 1), "mm\n")
@@ -325,7 +325,7 @@ using data.
 :::
 
 ::: {.column width="40%"}
-```{r}
+```{r l05-07}
 #| echo: false
 #| message: false
 #| warning: false
@@ -413,7 +413,7 @@ using data.
 :::
 
 ::: {.column width="40%"}
-```{r}
+```{r l05-08}
 #| echo: false
 #| message: false
 #| warning: false
@@ -518,7 +518,7 @@ How would you assess this question using what we learned?
 :::
 
 ::: {.column width="40%"}
-```{r}
+```{r l05-09}
 #| fig-width: 5
 #| fig-height: 4
 
@@ -582,7 +582,7 @@ group.
 
 1.  You need this and the graph to see what is going on ....
 
-    ```{r}
+    ```{r l05-10}
     group_summary <- ps_df %>%
       group_by(side) %>%
       summarize(
@@ -602,7 +602,7 @@ group.
 
 We could also look at the difference in means... some cool code here
 
-```{r}
+```{r l05-11}
 # Assuming your dataframe is called df
 group_summary %>%
   summarize(difference = mean_length[side == "shady"] - mean_length[side == "sunny"])
@@ -617,7 +617,7 @@ group_summary %>%
 GGplot also has code to make the mean and standard error plots we are
 interested in along with a lot of others
 
-```{r}
+```{r l05-12}
 # Assuming your dataframe is called df
 needle_mean_se_plot <- ggplot(ps_df, aes(x = side, y = length_mm, color = side)) +
   stat_summary(fun = mean, geom = "point") +
@@ -650,7 +650,7 @@ If assumptions are violated:
 
 Note you need to test each groups separately...
 
-```{r}
+```{r l05-13}
 #| paged-print: false
 # how do you make separate dataframes to do this on?
 # Separate data by groups
@@ -666,7 +666,7 @@ head(ps_sunny_df)
 
 There are always a lot of ways to do this in R
 
-```{r}
+```{r l05-14}
 # there are always two ways
 # Test for normality using Shapiro-Wilk test for each wind group
 # All in one pipeline using tidyverse approach
@@ -690,7 +690,7 @@ Levenes test can be done on the original dataframe
 **Note: the Levenes Test should be NOT SIGNIFICANT - What is the null
 hypothesis**
 
-```{r}
+```{r l05-15}
 #| message: false
 #| warning: false
 #| paged-print: false
@@ -813,7 +813,7 @@ significant\] difference in needle length between sunny (M = ..., SD =
 :::
 
 ::: {.column width="40%"}
-```{r}
+```{r l05-16}
 #| echo: false
 #| message: false
 #| warning: false
@@ -876,7 +876,7 @@ individual variation
 :::
 
 ::: {.column width="40%"}
-```{r}
+```{r l05-17}
 # YOUR TASK: Conduct a two-sample t-test
 # Use var.equal=TRUE for standard t-test or var.equal=FALSE for Welch's t-test
 
@@ -903,7 +903,7 @@ print(paired_t_test_result)
 Note that thee is a lot of variation within trees but the trend is the
 same
 
-```{r}
+```{r l05-18}
 ps_plot
 ```
 

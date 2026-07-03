@@ -568,7 +568,7 @@ u_summary
 # Plots
 
 ::: {.panel column="screen"}
-```{r}
+```{r l13-01}
 u_df %>% ggplot(aes(treat, algae)) +
   stat_summary(aes(treat, algae),fun = "mean", geom="point", size = 3) +
   geom_point(aes(color=as.factor(patch)), position = position_dodge2(width=0.3))

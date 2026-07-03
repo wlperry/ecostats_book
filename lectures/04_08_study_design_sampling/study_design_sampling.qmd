@@ -440,7 +440,7 @@ Randomization is essential at two levels:
 :::
 
 ::: {.column width="40%"}
-```{r echo=FALSE}
+```{r l08-06, echo=FALSE}
 #| paged-print: false
 
 # Example of randomization in R
@@ -538,7 +538,7 @@ data.frame(
 
 Let's consider sampling pine needles across campus:
 
-```{r}
+```{r l08-01}
 #| echo: false
 #| fig-height: 5
 #| fig-width: 5
@@ -625,7 +625,7 @@ ggplot() +
 
     How many samples do you need to find this difference
 
-```{r}
+```{r l08-02}
 # A priori power analysis for t-test
 # How many samples needed per group?
 
@@ -658,7 +658,7 @@ pwr.t.test(d = effect_size,
 
 # Post Hoc Power Analysis Example
 
-```{r, echo=TRUE}
+```{r l08-03, echo=TRUE}
 # Post hoc power analysis
 # If we had n = 20 per group
 
@@ -682,7 +682,7 @@ pwr.t.test(n = sample_size,
 Let's design a study to compare needle lengths between exposed and
 sheltered pine trees:
 
-```{r }
+```{r l08-04}
 #| fig-height: 4
 #| fig-width: 4
 # Based on pilot data, we have these estimates:
@@ -712,7 +712,7 @@ pwr.t.test(d = effect_size,
 Let's design a study to compare needle lengths between exposed and
 sheltered pine trees:
 
-```{r}
+```{r l08-05}
 #| echo: false
 #| fig-height: 4
 #| fig-width: 4

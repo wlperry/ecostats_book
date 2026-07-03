@@ -127,7 +127,7 @@ Let's examine our pine needle data:
 - \- How can you verify data formats (numeric vs categorical)?
 - \- What's your plan for organizing outputs and figures?
 
-```{r}
+```{r l02-01}
 # Code to read and examine data
 library(tidyverse)
 library(patchwork)
@@ -193,7 +193,7 @@ summary(pine_df)
 
 Create a histogram of pine needle lengths to check the distribution:
 
-```{r}
+```{r l02-02}
 # Write your code here to make a plot
 # How do you examine the data - what are the ways you think and lets try it!
 
@@ -308,7 +308,7 @@ pine_summary %>% flextable()
 :::
 
 ::: {.column width="40%"}
-```{r}
+```{r l02-03}
 #| echo: false
 #| message: false
 #| warning: false
@@ -341,7 +341,7 @@ According to [Tufte (2001)](https://www.edwardtufte.com/book/the-visual-display-
 6.  **Serve a clear purpose** in telling your story
 7.  **Integrate with statistical methods** appropriately
 
-```{r}
+```{r l02-04}
 #| echo: false
 #| message: false
 #| warning: false
@@ -454,7 +454,7 @@ Does this -
 :::
 
 ::: {.column width="40%"}
-```{r}
+```{r l02-05}
 #| echo: false
 #| message: false
 #| warning: false
@@ -496,7 +496,7 @@ What is one of the most common plots you make all the time?
 :::
 
 ::: {.column width="40%"}
-```{r}
+```{r l02-06}
 #| echo: false
 #| message: false
 #| warning: false
@@ -542,7 +542,7 @@ better_plot
 :::
 
 ::: {.column width="40%"}
-```{r}
+```{r l02-07}
 #| echo: false
 #| message: false
 #| warning: false

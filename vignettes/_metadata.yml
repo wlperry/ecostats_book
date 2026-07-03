@@ -2,9 +2,8 @@
 
 format:
   html:
-    css: ../css/activity.css
-    embed-resources: true
-    self-contained: true
+    # uses the shared /css/main.css from _quarto.yml (same theme as the data science site)
+    # embed-resources/self-contained removed so pages load shared site_libs (smaller files)
     max-width: 80ch
     toc: false
     fig-width: 5

@@ -1,32 +1,51 @@
 /*-- scss:defaults --*/
 
-@import 'https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible&display=swap';
+/* LIGHT theme — website + HTML documents + RevealJS slides.
+   Pairs with theme-dark.scss (Quarto requires two separate files for the
+   light/dark toggle; they cannot be combined).
+   Keep the font block below in sync with theme-dark.scss. */
 
-$font-family: "Atkinson Hyperlegible", sans-serif;
+@import url('https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+// Apply Atkinson Hyperlegible everywhere:
+//   $font-family-sans-serif  → Bootstrap / website
+//   $presentation-font-size-root etc. → RevealJS (via Quarto's reveal theme)
+$font-family-sans-serif:  "Atkinson Hyperlegible", ui-sans-serif, system-ui, sans-serif !default;
+$font-family-base:        "Atkinson Hyperlegible", ui-sans-serif, system-ui, sans-serif !default;
+$font-family:             "Atkinson Hyperlegible", ui-sans-serif, system-ui, sans-serif !default;
+$presentation-font-family: "Atkinson Hyperlegible", ui-sans-serif, system-ui, sans-serif;
+$code-font-family:        "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace !default;
+
+// Light-mode palette (keep neutral — colour comes from main.css)
+$body-bg:    #ffffff;
+$body-color: #222222;
+$link-color: #0056b3;      // 7.0:1 on white
+$link-hover-color: #003d82;
 
 /*-- scss:rules --*/
+/* Light-mode-only overrides go here. */
 
-// .render-commit-push {
-//   padding: 0.5em 0.5em 0em 3em;
-//   margin-top: 5px;
-//   margin-bottom: 5px;
-//   background: #f8f8f8 5px center/3em no-repeat;
-//   border-top: 1px solid #5B888C;
-//   border-bottom: 1px solid #5B888C;
-//   background-image: url("render-commit-push.png"); /* Notice the ../ */
-//   background-size: 2em;
-//   background-position: 0.5em 0.5em;
-// }
+:root {
+  color-scheme: light;
+}
 
-// .pull {
-//   padding: 0.5em 0.5em 0em 3em;
-//   margin-top: 5px;
-//   margin-bottom: 5px;
-//   background: #f8f8f8 5px center/3em no-repeat;
-//   border-top: 1px solid #E0A890;
-//   border-bottom: 1px solid #E0A890;
-//   background-image: url("pull.png"); /* Notice the ../ */
-//   background-size: 1em;
-//   background-position: 1em 0.5em;
-// }
+a {
+  color: $link-color;
 
+  &:hover,
+  &:focus {
+    color: $link-hover-color;
+  }
+
+  &:visited {
+    color: #6f2da8;   // 8.0:1 on white
+  }
+}
+
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+.nav-link:focus-visible {
+  outline: 2px solid #0056b3;
+  outline-offset: 2px;
+}

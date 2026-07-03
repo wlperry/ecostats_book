@@ -12,10 +12,8 @@ format:
   html:
     code-overflow: scroll
     toc: false
-    embed-resources: true
-    self-contained: true
     max-width: 80ch
-    css: ../../css/activity.css
+    css: ../../css/main.css
     fig-width: 5
     fig-height: 5
   docx:

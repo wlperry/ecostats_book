@@ -92,14 +92,12 @@ format:
     default: true
     embed-resources: true
     self-contained: true
-    css: css/activity.css
     default: true
     toc: false
     toc-depth: 3
     number-sections: false
     highlight-style: github
     reference-doc: ms_templates/custom-reference.docx
-    css: msword.css
     embed-resources: true
 ---
 ```

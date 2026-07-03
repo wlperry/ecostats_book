@@ -54,7 +54,25 @@ library(see)          # For better diagnostic plots
 ```{.r .cell-code}
 # Load the forest npp data
 forest_df <- read_csv("data/michaletz_etal_2014_clean.csv")
+```
 
+::: {.cell-output .cell-output-stderr}
+
+```
+Rows: 1220 Columns: 8
+── Column specification ────────────────────────────────────────────────────────
+Delimiter: ","
+chr (1): leaf
+dbl (7): npp, age, biomass, season, temp, precip, teb
+
+ℹ Use `spec()` to retrieve the full column specification for this data.
+ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.
+```
+
+
+:::
+
+```{.r .cell-code}
 # Display top lines
 head(forest_df)
 ```
@@ -507,6 +525,15 @@ ggplot(residuals_data, aes(x = Fitted, y = Residuals)) +
   theme_minimal()
 ```
 
+::: {.cell-output .cell-output-stderr}
+
+```
+`geom_smooth()` using formula = 'y ~ x'
+```
+
+
+:::
+
 ::: {.cell-output-display}
 ![](10_class_activity_files/figure-docx/unnamed-chunk-4-1.jpeg)
 :::
@@ -951,9 +978,9 @@ sessionInfo()
 ::: {.cell-output .cell-output-stdout}
 
 ```
-R version 4.6.0 (2026-04-24)
+R version 4.6.1 (2026-06-24)
 Platform: aarch64-apple-darwin23
-Running under: macOS Tahoe 26.4.1
+Running under: macOS Tahoe 26.5.2
 
 Matrix products: default
 BLAS:   /Library/Frameworks/R.framework/Versions/4.6/Resources/lib/libRblas.0.dylib 
@@ -969,23 +996,23 @@ attached base packages:
 [1] stats     graphics  grDevices utils     datasets  methods   base     
 
 other attached packages:
- [1] sensemakr_0.1.6    see_0.13.0         performance_0.16.0 broom_1.0.12      
+ [1] sensemakr_0.1.6    see_0.14.1         performance_0.17.1 broom_1.0.13      
  [5] GGally_2.4.0       corrplot_0.95      car_3.1-5          carData_3.0-6     
  [9] lubridate_1.9.5    forcats_1.0.1      stringr_1.6.0      dplyr_1.2.1       
 [13] purrr_1.2.2        readr_2.2.0        tidyr_1.3.2        tibble_3.3.1      
 [17] ggplot2_4.0.3      tidyverse_2.0.0   
 
 loaded via a namespace (and not attached):
- [1] gtable_0.3.6       xfun_0.57          insight_1.5.0      lattice_0.22-9    
- [5] tzdb_0.5.0         vctrs_0.7.3        tools_4.6.0        generics_0.1.4    
- [9] stats4_4.6.0       parallel_4.6.0     pkgconfig_2.0.3    Matrix_1.7-5      
-[13] RColorBrewer_1.1-3 S7_0.2.2           lifecycle_1.0.5    compiler_4.6.0    
+ [1] gtable_0.3.6       xfun_0.59          insight_1.5.2      lattice_0.22-9    
+ [5] tzdb_0.5.0         vctrs_0.7.3        tools_4.6.1        generics_0.1.4    
+ [9] stats4_4.6.1       parallel_4.6.1     pkgconfig_2.0.3    Matrix_1.7-5      
+[13] RColorBrewer_1.1-3 S7_0.2.2           lifecycle_1.0.5    compiler_4.6.1    
 [17] farver_2.1.2       codetools_0.2-20   htmltools_0.5.9    yaml_2.3.12       
 [21] Formula_1.2-5      pillar_1.11.1      crayon_1.5.3       abind_1.4-8       
 [25] nlme_3.1-169       ggstats_0.13.0     tidyselect_1.2.1   digest_0.6.39     
-[29] stringi_1.8.7      labeling_0.4.3     splines_4.6.0      fastmap_1.2.0     
-[33] grid_4.6.0         cli_3.6.6          magrittr_2.0.5     utf8_1.2.6        
-[37] withr_3.0.2        scales_1.4.0       backports_1.5.1    bit64_4.8.0       
+[29] stringi_1.8.7      labeling_0.4.3     splines_4.6.1      fastmap_1.2.0     
+[33] grid_4.6.1         cli_3.6.6          magrittr_2.0.5     utf8_1.2.6        
+[37] withr_3.0.3        scales_1.4.0       backports_1.5.1    bit64_4.8.2       
 [41] timechange_0.4.0   rmarkdown_2.31     bit_4.6.0          otel_0.2.0        
 [45] hms_1.1.4          evaluate_1.0.5     knitr_1.51         mgcv_1.9-4        
 [49] rlang_1.2.0        glue_1.8.1         vroom_1.7.1        jsonlite_2.0.0    

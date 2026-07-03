@@ -10,11 +10,9 @@ execute:
   paged-print: false
 format:
   html:
-    css: ../../css/activity.css
+    css: ../../css/main.css
     code-overflow: scroll
     toc: false
-    embed-resources: true
-    self-contained: true
     max-width: 80ch
     fig-width: 3.5
     fig-height: 3.5

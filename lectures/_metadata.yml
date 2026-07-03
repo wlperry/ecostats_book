@@ -13,8 +13,10 @@ format:
     fig-width: 5
     fig-height: 5
   revealjs:
-    css: ../css/lecture.css
-    theme: [default, ../css/theme.scss] 
+    output-ext: "slides.html"   # slides render as *.slides.html so they never
+                                # collide with the page's own index.html/*.html
+    css: ../css/main.css
+    theme: [default, ../css/theme.scss]
     slide-number: true
     transition: fade
   pptx:

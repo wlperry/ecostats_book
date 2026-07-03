@@ -5,8 +5,7 @@ execute:
 
 format:
   revealjs:
-    self-contained: true
-    css: ../../css/lecture.css
+    css: ../../css/main.css
     theme: [default, ../../css/theme.scss]
     slide-number: true
     transition: fade
@@ -27,7 +26,6 @@ format:
     fig-height: 4       
     fig-dpi: 300        
   html:
-    css: /css/lecture.css
+    css: /css/main.css
     downloads: [docx, pptx, typst]
     max-width: 80ch
-    embed-resources: true

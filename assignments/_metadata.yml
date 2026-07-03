@@ -1,8 +1,7 @@
 format:
   html:
-    css: ../css/activity.css
+    # uses the shared /css/main.css from _quarto.yml (same theme as the data science site)
     format-links: [docx]   # <--- THIS ADDS THE "DOWNLOAD WORD" BUTTON!
-    self-contained: true
     max-width: 80ch
     toc: false
     fig-width: 5

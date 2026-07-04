@@ -19,12 +19,10 @@ listing:
   sort-ui: false
   filter-ui: true
   categories: false            # matches the data science site (no filter chips)
-  fields: [title, subtitle, description, categories]
+  fields: [title, subtitle]     # only two columns: Lecture + Topic
   field-display-names:
     title: "Lecture"
     subtitle: "Topic"
-    description: "What it covers"
-    categories: "Tags"
   field-types:
     order: number             # tells Quarto to sort numerically, not alphabetically
 ---

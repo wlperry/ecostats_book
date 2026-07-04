@@ -2,6 +2,7 @@
 order: 6
 week: 6
 title: "Homework 6 — Multiple Regression"
+subtitle: "Several predictors"
 description: "Multiple linear regression."
 author: "Bill Perry"
 ---

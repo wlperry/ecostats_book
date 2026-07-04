@@ -2,6 +2,7 @@
 order: 17
 week: 9
 title: "Principal Component Analysis"
+subtitle: "Ordination"
 description: "Hands-on activity: principal component analysis."
 author: "Bill Perry"
 format:

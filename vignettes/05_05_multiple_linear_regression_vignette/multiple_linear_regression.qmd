@@ -2,6 +2,7 @@
 order: 5
 week: 5
 title: "Multiple Linear Regression"
+subtitle: "Multiple regression"
 description: "Multiple linear regression in R."
 resources: ["multiple_linear_regression.R"]
 author: "Bill Perry"

@@ -2,6 +2,7 @@
 order: 11
 week: 6
 title: "ANOVA in Class"
+subtitle: "One-way ANOVA"
 description: "Hands-on activity: one-way analysis of variance."
 author: "Bill Perry"
 ---

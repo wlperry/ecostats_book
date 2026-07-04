@@ -2,6 +2,7 @@
 order: 6
 week: 3
 title: "Power and Type I & II Error"
+subtitle: "Power and error rates"
 description: "Hands-on activity: power and error rates."
 author: "Bill Perry"
 metadata-files:

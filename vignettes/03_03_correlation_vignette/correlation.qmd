@@ -2,6 +2,7 @@
 order: 3
 week: 3
 title: "Correlation Analysis"
+subtitle: "Correlation"
 description: "Correlation analysis in R."
 resources: ["correlation.R"]
 author: "Bill Perry"

@@ -2,6 +2,7 @@
 order: 1
 week: 1
 title: "Introduction — Start with R"
+subtitle: "Getting started in R"
 description: "Hands-on activity: getting started in R and RStudio."
 ---
 

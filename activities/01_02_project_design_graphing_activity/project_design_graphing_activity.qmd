@@ -2,6 +2,7 @@
 order: 2
 week: 1
 title: "Project Design & Graphing Data"
+subtitle: "Projects and ggplot"
 description: "Hands-on activity: project setup and graphing with ggplot2."
 author: "Bill Perry"
 metadata-files:

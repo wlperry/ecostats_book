@@ -2,6 +2,7 @@
 order: 9
 week: 7
 title: "Homework 9 — Linear Mixed Models"
+subtitle: "Linear mixed models"
 description: "Linear mixed models."
 author: "Bill Perry"
 ---

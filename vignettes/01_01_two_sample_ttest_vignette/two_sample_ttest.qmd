@@ -2,6 +2,7 @@
 order: 1
 week: 1
 title: "Two Sample T-Test"
+subtitle: "Parametric t-test"
 description: "Parametric two-sample t-test walkthrough in R."
 resources: ["two_sample_ttest.R"]
 author: "Bill Perry"

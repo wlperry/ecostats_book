@@ -2,6 +2,7 @@
 order: 5
 week: 5
 title: "Homework 5 — Correlation & Regression"
+subtitle: "Correlation and regression"
 description: "Correlation and simple linear regression."
 author: "Bill Perry"
 ---

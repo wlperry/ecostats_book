@@ -2,6 +2,7 @@
 order: 4
 week: 4
 title: "Linear Regression"
+subtitle: "Simple regression"
 description: "Simple linear regression in R."
 resources: ["linear_regression.R"]
 author: "Bill Perry"

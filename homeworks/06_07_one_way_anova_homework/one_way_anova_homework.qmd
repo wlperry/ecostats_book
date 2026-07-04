@@ -2,6 +2,7 @@
 order: 7
 week: 6
 title: "Homework 7 — One-Way ANOVA"
+subtitle: "One-way ANOVA"
 description: "One-way analysis of variance."
 author: "Bill Perry"
 

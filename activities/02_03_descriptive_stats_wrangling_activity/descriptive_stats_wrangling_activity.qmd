@@ -2,6 +2,7 @@
 order: 3
 week: 2
 title: "Descriptive Statistics & Wrangling"
+subtitle: "Summaries and wrangling"
 description: "Hands-on activity: summaries and tidyverse data wrangling."
 author: "Bill Perry"
 metadata-files:

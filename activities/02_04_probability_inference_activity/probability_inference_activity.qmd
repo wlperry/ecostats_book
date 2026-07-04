@@ -2,6 +2,7 @@
 order: 4
 week: 2
 title: "Probability & Inference"
+subtitle: "Probability and inference"
 description: "Hands-on activity: probability and statistical inference."
 author: "Bill Perry"
 metadata-files:

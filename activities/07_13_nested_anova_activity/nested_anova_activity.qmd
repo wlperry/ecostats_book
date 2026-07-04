@@ -2,6 +2,7 @@
 order: 13
 week: 7
 title: "Nested / Multifactor ANOVA"
+subtitle: "Nested designs"
 description: "Hands-on activity: nested and multifactor ANOVA."
 author: "Bill Perry"
 format:

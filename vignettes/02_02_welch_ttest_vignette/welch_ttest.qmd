@@ -2,6 +2,7 @@
 order: 2
 week: 2
 title: "Welch's Two Sample T-Test"
+subtitle: "Unequal-variance t-test"
 description: "Welch's (unequal-variance) two-sample t-test in R."
 resources: ["welch_ttest.R"]
 author: "Bill Perry"

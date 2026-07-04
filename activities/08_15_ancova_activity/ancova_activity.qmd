@@ -2,6 +2,7 @@
 order: 15
 week: 8
 title: "ANCOVA"
+subtitle: "Covariates"
 description: "Hands-on activity: analysis of covariance."
 author: "Bill Perry"
 format:

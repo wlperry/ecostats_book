@@ -2,6 +2,7 @@
 order: 4
 week: 4
 title: "Linear Regression Analysis - Paperweight Calibration for Leaf Area Estimation"
+subtitle: "Simple regression"
 author: "Bill Perry"
 ---
 

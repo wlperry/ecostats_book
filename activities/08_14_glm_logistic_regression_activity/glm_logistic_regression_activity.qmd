@@ -2,6 +2,7 @@
 order: 14
 week: 8
 title: "Generalized Linear Models"
+subtitle: "Generalized linear models"
 description: "Hands-on activity: GLMs and logistic regression."
 author: "Bill Perry"
 format:

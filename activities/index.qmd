@@ -18,12 +18,10 @@ listing:
   sort-ui: false
   filter-ui: true
   categories: false              # no clickable filter chips (matches data science site)
-  fields: [order, week, title, description]
+  fields: [title, subtitle]      # only two columns: Activity + Topic
   field-display-names:
-    order: "Activity #"
-    week: "Week"
     title: "Activity"
-    description: "Description"
+    subtitle: "Topic"
   field-types:
     order: number
 ---

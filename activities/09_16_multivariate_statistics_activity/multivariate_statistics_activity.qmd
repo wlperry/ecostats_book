@@ -2,6 +2,7 @@
 order: 16
 week: 9
 title: "Multivariate Statistics (MANOVA)"
+subtitle: "MANOVA"
 description: "Hands-on activity: MANOVA and multivariate methods."
 author: "Bill Perry"
 format:

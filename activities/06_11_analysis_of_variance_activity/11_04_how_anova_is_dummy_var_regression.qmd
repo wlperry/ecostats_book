@@ -2,6 +2,7 @@
 order: 11
 week: 6
 title: "How an ANOVA IS A REGRESSION WIHT DUMMY VARIABLES "
+subtitle: "One-way ANOVA"
 author: "Bill Perry"
 format:
   html: default

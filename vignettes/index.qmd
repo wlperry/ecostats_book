@@ -18,12 +18,10 @@ listing:
   sort-ui: false
   filter-ui: true
   categories: false
-  fields: [order, week, title, description]
+  fields: [title, subtitle]      # only two columns: Statistical Test + Topic
   field-display-names:
-    order: "#"
-    week: "Week"
     title: "Statistical Test"
-    description: "Description"
+    subtitle: "Topic"
   field-types:
     order: number
 ---

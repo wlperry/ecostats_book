@@ -18,12 +18,10 @@ listing:
   sort-ui: false
   filter-ui: true
   categories: false
-  fields: [order, week, title, description]
+  fields: [title, subtitle]      # only two columns: Homework + Topic
   field-display-names:
-    order: "Homework #"
-    week: "Week"
     title: "Homework"
-    description: "Description"
+    subtitle: "Topic"
   field-types:
     order: number
 ---

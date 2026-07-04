@@ -2,6 +2,7 @@
 order: 8
 week: 7
 title: "Homework 8 — Factorial ANOVA"
+subtitle: "Factorial ANOVA"
 description: "Two-factor / factorial ANOVA."
 author: "Bill Perry"
 ---

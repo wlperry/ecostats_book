@@ -2,6 +2,7 @@
 order: 10
 week: 6
 title: "Multiple Regression"
+subtitle: "Several predictors"
 description: "Hands-on activity: multiple linear regression."
 author: "Bill Perry"
 metadata-files:
